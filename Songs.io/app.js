@@ -42,7 +42,7 @@ app.use(function (err, req, res, next) {
 })
 
 app.get('/', (req, res) => {
-  res.send('Wassup betch')
+  res.send('Wassup TANGINA M')
 })
 
 app.listen(port, () => {
