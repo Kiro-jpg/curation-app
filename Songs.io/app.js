@@ -9,7 +9,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var aboutRouter = require('./routes/about');
-const port = 3000
+const port = 3000;
+const dbURL = 'mongodb+srv://josh:<password>@groovy.x687l.mongodb.net/groovy-db?retryWrites=true&w=majority'
 var app = express();
 
 // view engine setup
@@ -44,9 +45,16 @@ app.use(function (err, req, res, next) {
   res.render('error');
 })
 
+
+// basic routes
 app.get('/', (req, res) => {
   res.send('HAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHA')
 })
+
+// playlist routes
+// album routes
+// artist routes
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
