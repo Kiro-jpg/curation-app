@@ -19,3 +19,5 @@ const playlistSchema = new Schema({
     } // id = 1
 
 })
+
+const Playlist = mongoose.model('Playlist', playlistSchema);
