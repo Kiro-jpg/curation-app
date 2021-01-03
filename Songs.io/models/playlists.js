@@ -10,6 +10,10 @@ const playlistSchema = new Schema({
         type: String,
         required: false
     },
+    image:{
+        type: String,
+        required: false
+    }
     // loop songs from database for each (display songs inside database)
     // manual display one by one
     // song id and this id contains all the songs
