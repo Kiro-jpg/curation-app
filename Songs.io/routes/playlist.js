@@ -1,11 +1,12 @@
 var express = require('express');
+const app = require('../app');
 var router = express.Router();
-const playlist = require('../models/playlists');
+const Playlist = require('../models/playlists');
 
 /* GET home page. */
-router.get('/playlist', function (req, res, next) {
-  const playlist = new playlist({
-    title: 'modtakels',
+router.get('/create', (req, res) => {
+  const playlist = new Playlist({
+    title: 'modtakels2',
     description: 'tae',
     image: 'ihi'
   });
@@ -18,11 +19,53 @@ router.get('/playlist', function (req, res, next) {
     console.log(err);
   });
 
+});
 
-  res.render('playlist', {
-    title: 'yes'
-    
+router.get('/all-playlist', (req,res) => {
+
+  Playlist.find()
+  .then((result) =>{
+    res.send(result);
+  })
+  .catch((err) =>{
+    console.log(err);
   });
+
+});
+
+router.get('/single-playlist', (req,res) =>{
+  Playlist.findById('5ff30ba9eb65fb3e68ca936d')
+  .then((result) =>{
+    res.send(result)
+  })
+  .catch((err)=> {
+    console.log(err);
+  });
+
+});
+
+router.get('/playlist', (req,res) =>{
+  Playlist.find()
+  .then((result) =>{
+    res.render('playlist', { title:'All Playlist', playlist: result})
+  })
+  .catch((err)=> {
+    console.log(err);
+  });
+
+});
+
+router.post('/playlist', (req,res) =>{
+  const playlist = new Playlist(req.body);
+
+  Playlist.save()
+  .then((result)=> {
+    res.redirect('/playlist');
+  })
+  .catch((err)=>{
+    console.log(err);
+  });
+
 });
 
 module.exports = router; 

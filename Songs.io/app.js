@@ -5,6 +5,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var aboutRouter = require('./routes/about');
+var albumRouter = require('./routes/album');
+var artistRouter = require('./routes/artist');
+var playlistRouter = require('./routes/playlist');
 // express
 var app = express();
 
@@ -38,15 +44,10 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.use(express.urlencoded({ extended:true }));
 
 // routes
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var aboutRouter = require('./routes/about');
-var albumRouter = require('./routes/album');
-var artistRouter = require('./routes/artist');
-var playlistRouter = require('./routes/playlist');
+
 
 app.use(indexRouter);
 app.use(usersRouter);
