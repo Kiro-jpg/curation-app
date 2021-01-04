@@ -1,10 +1,2 @@
-/* songs db {
-    id = 1,
-    ngek
-    demons
-    burat
-    hayop
-    tangina
-    psycho
-
-} */
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
