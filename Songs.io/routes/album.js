@@ -54,17 +54,4 @@ router.get('/album', (req,res) =>{
 
 });
 
-router.post('/album', (req,res) =>{
-  const album = new Album(req.body);
-
-  Album.save()
-  .then((result)=> {
-    res.redirect('/album');
-  })
-  .catch((err)=>{
-    console.log(err);
-  });
-
-});
-
 module.exports = router;
