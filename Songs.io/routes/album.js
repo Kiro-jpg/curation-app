@@ -33,7 +33,7 @@ router.get('/all-album', (req,res) => {
 });
 
 router.get('/single-album', (req,res) =>{
-  Album.findById('5ff30ba9eb65fb3e68ca936d')
+  Album.findById('5ff3185361a6ef40049ff8da')
   .then((result) =>{
     res.send(result)
   })
