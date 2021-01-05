@@ -109,18 +109,13 @@ a {
   box-sizing: border-box;
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
-body {
-  background: #202020;
-  font-family: "Krub", sans-serif;
+.Profile {
+  padding-top: 10rem;
 }
 
 .card {
+  background: #202020;
+  font-family: "Krub", sans-serif;
   position: absolute;
   margin: auto;
   top: 0;
@@ -130,9 +125,9 @@ body {
   width: 250px;
   height: 400px;
   border-radius: 10px;
-  box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
-  background: #151515;
+  box-shadow: 15px 25px 35px 15px rgba(251, 63, 148, 0.3);
   overflow: hidden;
+
 }
 
 .card .ds-top {
@@ -143,7 +138,8 @@ body {
   left: 0;
   width: 300px;
   height: 80px;
-  background: crimson;
+  background: rgb(59, 23, 110);
+  background: linear-gradient(0deg, rgba(59, 23, 110, 1) 0%, rgba(251, 63, 148, 1) 100%);
   animation: dsTop 1.5s;
 }
 
@@ -157,7 +153,7 @@ body {
   height: 100px;
   border-radius: 50%;
   box-shadow: 0 0 0 5px #151515, inset 0 0 0 5px #000000, inset 0 0 0 5px #000000, inset 0 0 0 5px #000000, inset 0 0 0 5px #000000;
-  background: white;
+  background: rgb(255, 255, 255);
   overflow: hidden;
   animation: mvTop 1.5s;
 }
@@ -182,7 +178,7 @@ body {
 }
 
 .card .name a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
@@ -190,7 +186,7 @@ body {
 
 .card .name a:hover {
   text-decoration: underline;
-  color: crimson;
+  color: white;
 }
 
 .card .name h6 {
@@ -230,7 +226,7 @@ body {
 
 .card .button a:hover {
   color: white;
-  background: crimson;
+  background: white;
 }
 
 .card .ds-info {
@@ -243,11 +239,11 @@ body {
   width: inherit;
   height: 40px;
   display: flex;
+  justify-content: center;
+  margin-top: 70px;
 }
 
-.card .ds-info .pens,
-.card .ds-info .projects,
-.card .ds-info .posts {
+.playlist {
   position: relative;
   left: -300px;
   width: calc(250px / 3);
@@ -257,92 +253,15 @@ body {
   animation-fill-mode: forwards;
 }
 
-.card .ds-info .pens h6,
-.card .ds-info .projects h6,
-.card .ds-info .posts h6 {
+.playlist h6 {
   text-transform: uppercase;
-  color: crimson;
+  color: white;
 }
 
-.card .ds-info .pens p,
-.card .ds-info .projects p,
-.card .ds-info .posts p {
+.playlist p {
   font-size: 12px;
 }
 
-.card .ds-info .ds:nth-of-type(2) {
-  animation-delay: 0.5s;
-}
-
-.card .ds-info .ds:nth-of-type(1) {
-  animation-delay: 1s;
-}
-
-.card .ds-skill {
-  position: absolute;
-  margin: auto;
-  bottom: 10px;
-  right: 0;
-  left: 0;
-  width: 200px;
-  height: 100px;
-  animation: mvBottom 1.5s;
-}
-
-.card .ds-skill h6 {
-  margin-bottom: 5px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: crimson;
-}
-
-.card .ds-skill .skill h6 {
-  font-weight: 400;
-  font-size: 8px;
-  letter-spacing: 0.05em;
-  margin: 4px 0;
-  color: white;
-}
-
-.card .ds-skill .skill .fab {
-  color: crimson;
-  font-size: 14px;
-}
-
-.card .ds-skill .skill .bar {
-  height: 5px;
-  background: crimson;
-  text-align: right;
-}
-
-.card .ds-skill .skill .bar p {
-  color: white;
-  font-size: 8px;
-  padding-top: 5px;
-  animation: fadeIn 5s;
-}
-
-.card .ds-skill .skill .bar:hover {
-  background: white;
-}
-
-.card .ds-skill .skill .bar-html {
-  width: 95%;
-  animation: htmlSkill 1s;
-  animation-delay: 0.4s;
-}
-
-.card .ds-skill .skill .bar-css {
-  width: 90%;
-  animation: cssSkill 2s;
-  animation-delay: 0.4s;
-}
-
-.card .ds-skill .skill .bar-js {
-  width: 75%;
-  animation: jsSkill 3s;
-  animation-delay: 0.4s;
-}
 
 @keyframes fadeInMove {
   0% {
@@ -363,36 +282,6 @@ body {
 
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes htmlSkill {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 95%;
-  }
-}
-
-@keyframes cssSkill {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 90%;
-  }
-}
-
-@keyframes jsSkill {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 75%;
   }
 }
 
@@ -427,8 +316,8 @@ body {
 }
 
 .following {
-  color: white;
-  background: crimson;
+  color: rgb(0, 0, 0);
+  background: rgb(0, 0, 0);
 }
 
 /*footer*/
@@ -466,7 +355,7 @@ body {
 
 .GroovyLogo {
   height: 75%;
-  width: 75%;
+  width: 65%;
   padding-top: 5rem;
-  margin-left: 6rem;
+  margin-left: 10rem;
 }
