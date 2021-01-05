@@ -6,6 +6,12 @@ body {
 
 /*Navbar*/
 
+.Navbar-text {
+  font-family: 'Inter', sans-serif;
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+}
 .add {
   background: linear-gradient(0deg, rgba(59, 23, 110, 1) 0%, rgba(251, 63, 148, 1) 100%);
   -webkit-background-clip: text;
