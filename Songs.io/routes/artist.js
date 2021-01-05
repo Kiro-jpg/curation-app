@@ -28,8 +28,8 @@ router.get('/all-artist', (req, res) => {
     })
 });
 
-router.get('/single-playlist', (req, res) => {
-  Artist.findById('')
+router.get('/single-artist', (req, res) => {
+  Artist.findById('5ff318b717fee251bcd68b9c')
     .then((result) => {
       res.send(result)
     })
