@@ -4,7 +4,8 @@
     <%- include("./partials/head.ejs") %>
 
 <body>
-    <div class="container card-body">
+    <%- include("./partials/nav-search.ejs") %>
+    <div class="card bg-light">
         <h1>Playlists</h1>
 
         <% if (playlist.length > 0) { %>
