@@ -2,9 +2,71 @@ body {
   font: 14px "Inter", Helvetica, Arial, sans-serif;
   width: 100%;
   min-height: 100vh;
+}
+
+#HomePage {
   background-image: url("/logo/Home-Background.jpg");
   background-position: center right;
   background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+
+
+.blocks {
+  position: relative;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding-top: 15rem;
+  padding-left: 5rem;
+}
+
+.blocks .block {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  transform: perspective(600px) rotateY(-30deg);
+  transition: transform 0.3s;
+}
+
+.blocks .block img {
+  width: auto;
+  max-width: 100%;
+}
+
+.blocks .block .overlay {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.blocks .block .overlay img {
+  width: auto;
+  max-width: 50%;
+}
+
+.blocks .block.hover,
+.blocks .block:hover {
+  transform: rotateY(0);
+  cursor: pointer;
+}
+
+.blocks .block.hover .overlay,
+.blocks .block:hover .overlay {
+  opacity: 1;
 }
 
 a {
