@@ -2,7 +2,9 @@ body {
   font: 14px "Inter", Helvetica, Arial, sans-serif;
   width: 100%;
   min-height: 100vh;
-  background-color: beige;
+  background-image: url("/logo/Home-Background.jpg");
+  background-position: center right;
+  background-size: cover;
 }
 
 a {
