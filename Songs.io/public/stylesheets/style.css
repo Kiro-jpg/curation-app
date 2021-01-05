@@ -7,8 +7,9 @@ body {
 /*Navbar*/
 
 .add {
-  color: rgb(59, 23, 110);
   background: linear-gradient(0deg, rgba(59, 23, 110, 1) 0%, rgba(251, 63, 148, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #HomePage {
