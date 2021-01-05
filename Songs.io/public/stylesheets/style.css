@@ -5,7 +5,7 @@ body {
 }
 
 #HomePage {
-  background-image: url("/logo/Home-Background.png");
+  background-image: url("/logo/Home-Background.jpg");
   background-position: center top;
   background-size: cover;
   min-height: 100vh;
