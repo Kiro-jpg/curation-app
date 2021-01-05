@@ -1,5 +1,4 @@
 var express = require('express');
-const app = require('../app');
 var router = express.Router();
 const Playlist = require('../models/playlists');
 
@@ -47,7 +46,7 @@ router.get('/single-playlist', (req,res) =>{
 router.get('/playlist', (req,res) =>{
   Playlist.find()
   .then((result) =>{
-    res.render('playlist', { title:'All Playlist', playlist: result})
+    res.render('playlist.ejs', { title:'All Playlist', playlist: result})
   })
   .catch((err)=> {
     console.log(err);

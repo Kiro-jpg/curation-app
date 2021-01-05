@@ -3,9 +3,13 @@ body {
   font: 14px "Inter", Helvetica, Arial, sans-serif;
   width: 100%;
   min-height: 100vh;
-
+  background-color: beige;
 }
 
 a {
-  color: #00B7FF;
+  color: black;
+}
+
+.title {
+  color: black;
 }
