@@ -12,3 +12,9 @@ a {
 .title {
   color: black;
 }
+
+.img-logo {
+  height: 50px;
+  width: 85px;
+  margin-left: 1.5rem;
+}
