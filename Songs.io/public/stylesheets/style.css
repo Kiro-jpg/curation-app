@@ -29,15 +29,13 @@ body {
 }
 
 
-
-
 .blocks {
   position: relative;
   display: flex;
   align-items: left;
   justify-content: left;
-  padding-top: 12rem;
-  padding-left: 6rem;
+  padding-top: 5.5rem;
+  padding-left: 4rem;
 }
 
 .blocks .block {
