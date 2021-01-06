@@ -57,7 +57,7 @@ router.get('/playlist', (req,res) =>{
 router.post('/playlist', (req,res) =>{
   const playlist = new Playlist(req.body);
 
-  Playlist.save()
+  playlist.save()
   .then((result)=> {
     res.redirect('/playlist');
   })
@@ -66,6 +66,8 @@ router.post('/playlist', (req,res) =>{
   });
 
 });
+
+
 
 module.exports = router; 
 

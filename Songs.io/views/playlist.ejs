@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("./partials/head.ejs") %>
+<%- include("./partials/head.ejs") %>
 
 <body>
-    <%- include("./partials/nav-search.ejs") %>
-    <div class="card bg-light">
-        <h1>Playlists</h1>
+  <%- include("./partials/nav-search.ejs") %>
+  <h1 class="playtitle">Playlists</h1>
+  <% if (playlist.length > 0) { %>
+  <% playlist.forEach(playlist => { %>
 
-        <% if (playlist.length > 0) { %>
-            <% playlist.forEach(playlist => { %>
-              <a class="single" href="/playlist/<%= playlist._id %>">
-                <h3 class="title"><%= playlist.title %></h3>
-                <p class="snippet"><%= playlist.description %></p>
-                <p class="image"><%= playlist.image %></p>
-              </a>
-            <% }) %>
-          <% } else { %>
-            <p>There are no playlists to display...</p>
-          <% } %>
-        
-    </div>
+  <div class="card bg-dark playcon">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
+
+
+    <a class="single" href="/playlist/<%= playlist._id %>">
+      <h3 class="title"><%= playlist.title %></h3>
+      <p class="image"><%= playlist.image %></p>
+    </a>
+    <p class="description"><%= playlist.description %></p>
+  </div>
+  <% }) %>
+  <% } else { %>
+  <p>There are no playlists to display...</p>
+  <% } %>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>

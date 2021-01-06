@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+
+<body>
+    <%- include("./partials/nav-search.ejs") %>
+
+    <div class="create-playlist content">
+        <form action="/playlist" method="POST" class="formcontent">
+            <label for="title" class="titleform">Playlist title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="description" class="descriptionform"> Playlist description: </label>
+            <input type="text" id="description" name="description" required>
+            <label for="image" class="imageform">Playlist image: </label>
+            <input type="text" id="image" name="image" required>
+            <button>Create</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

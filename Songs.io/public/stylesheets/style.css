@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Krub:400,700");
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Titillium+Web:wght@300;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,900&display=swap%27');
 
 /*General CSS*/
 body {
@@ -417,4 +418,51 @@ a {
 #vision {
   height: 100vh;
   width: 100%;
+}
+
+.playcon {
+  margin-top: 10rem;
+  display: flex;
+  height: 340px;
+  width: 90%;
+}
+
+.description {
+  color: white;
+  font-weight: 400;
+  font-size: 27px;
+}
+
+.title {
+  color: white;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.playtitle {
+  padding-left: 6rem;
+  padding-top: 9rem;
+  color: white;
+  font-weight: 900;
+  font-size: 75px;
+}
+
+.content {
+  min-height: 500px;
+  width: 700px;
+  padding-top: 10rem;
+
+  padding-left: 3rem;
+
+}
+
+.titleform,
+.descriptionform,
+.imageform {
+  color: white;
+}
+
+.formcontent {
+  min-height: fit-content;
+  display: grid;
 }
