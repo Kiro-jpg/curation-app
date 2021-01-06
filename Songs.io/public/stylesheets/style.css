@@ -1,13 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Krub:400,700");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Titillium+Web:wght@300;600;700&display=swap');
+
+
+/*General CSS*/
 body {
-  font: 14px "Inter", Helvetica, Arial, sans-serif;
   width: 100%;
   min-height: 100vh;
   scroll-behavior: smooth;
+  background-color: #141414 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Inter', sans-serif;
+}
+
+p {
+  font-family: 'Titillium Web', sans-serif;
 }
 
 /*Navbar*/
+
+.navbar {
+  background-color: transparent;
+}
+
 .Navbar-text {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   color: white;
   text-decoration: none;
   font-weight: 900;
@@ -26,6 +49,12 @@ body {
   margin-left: 2rem;
 }
 
+
+.navbar.solid {
+  background-color: #141414;
+  transition: background-color .3s ease 0s;
+}
+
 /*Home Page*/
 #HomePage {
   background-image: url("/logo/Home-Background.jpg");
@@ -35,7 +64,7 @@ body {
   width: 100%;
 }
 
-
+/*Playlists*/
 .blocks {
   position: relative;
   display: flex;
@@ -94,21 +123,14 @@ body {
 }
 
 a {
-  color: black;
+  color: #141414;
 }
 
 .title {
-  color: black;
+  color: #141414;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Krub:400,700");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/*User Profile*/
 .Profile {
   padding-top: 10rem;
 }
@@ -324,12 +346,14 @@ a {
 .FooterContainer {
   min-height: 300px;
   width: 100%;
-  background: black;
+
 }
 
 .footerheader {
-  font-family: 'Poppins', sans-serif;
-  color: #fb3f94;
+  background: linear-gradient(90deg, rgba(59, 23, 110, 1) 0%, rgba(251, 63, 148, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 900;
   padding-top: 2rem;
   padding-left: 2rem;
@@ -339,7 +363,6 @@ a {
   color: white;
   padding-top: 2rem;
   padding-left: 2rem;
-  font-family: 'Lato', sans-serif;
 }
 
 .contacticons {
@@ -358,4 +381,30 @@ a {
   width: 65%;
   padding-top: 5rem;
   margin-left: 10rem;
+}
+
+/*About.ejs*/
+
+
+
+#landing {
+  width: 100%;
+  height: 50vh;
+  background-image: url("/logo/about-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#landing h1 {
+  font-weight: 900;
+  font-size: 100px;
+}
+
+#landing a {
+  color: white;
+}
+
+#vision {
+  height: 100vh;
+  width: 100%;
 }
