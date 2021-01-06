@@ -3,7 +3,7 @@ var router = express.Router();
 const Artist = require('../models/artists');
 
 /* GET home page. */
-router.get('/artist', (req, res, next) => {
+router.get('/iba', (req, res, next) => {
   const artist = new Artist({
     name: 'John Magdato',
     image: 'LTM'
@@ -36,6 +36,17 @@ router.get('/single-artist', (req, res) => {
     .catch((err) => {
       console.log(err);
     });
+
+});
+
+router.get('/artist', (req,res) =>{
+  Artist.find()
+  .then((result) =>{
+    res.render('artist.ejs', { title:'All Artist', artist: result})
+  })
+  .catch((err)=> {
+    console.log(err);
+  });
 
 });
 
