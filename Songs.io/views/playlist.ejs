@@ -10,14 +10,6 @@
   <% playlist.forEach(playlist => { %>
 
   <div class="card bg-dark playcon">
-<<<<<<< HEAD
-
-    <a class="single" href="/playlist/<%= playlist._id %>">
-      <h3 class="title"><%= playlist.title %></h3>
-      <img class="image" height="20%" width="10%" src="<%= playlist.image %>"></img>
-    </a>
-    <p class="description"><%= playlist.description %></p>
-=======
     <div class="playlistcontainer">
       <a class="single" href="/playlist/<%= playlist._id %>">
         <img class="image" height="100px" width="100px" src="<%= playlist.image %>"></img>
@@ -29,7 +21,6 @@
         <p class="description"><%= playlist.description %></p>
       </div>
     </div>
->>>>>>> b6d589527d85ce636fa1ee4c2961f37fee0e4d0e
   </div>
   <% }) %>
   <% } else { %>
