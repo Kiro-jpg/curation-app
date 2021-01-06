@@ -422,22 +422,37 @@ a {
 
 .playcon {
   margin-top: 0rem;
-  display: flex;
-  height: 200px;
+  display: grid;
+  height: 150px;
   width: 90%;
   margin-bottom: 4rem;
+}
+
+.playlistcontainer {
+  display: flex;
+}
+
+.titleDescription {
+  display: grid;
+  margin-left: 20px;
 }
 
 .description {
   color: white;
   font-weight: 400;
-  font-size: 27px;
+  font-size: 20px;
 }
 
-.title {
+.titleplaylist {
   color: white;
   font-weight: 900;
   font-size: 40px;
+  margin-top: 20px;
+}
+
+.image {
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .playtitle {
@@ -453,11 +468,10 @@ a {
   min-height: 500px;
   width: 700px;
   padding-top: 10rem;
-
   padding-left: 3rem;
-
 }
 
+/*Form*/
 .titleform,
 .descriptionform,
 .imageform {
