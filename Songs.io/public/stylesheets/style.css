@@ -359,6 +359,16 @@ a {
   padding-left: 2rem;
 }
 
+.footerheader-2 {
+  background: linear-gradient(90deg, rgba(251, 63, 148, 1) 0%, rgba(59, 23, 110, 1) 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+
 .about {
   color: white;
   padding-top: 2rem;
