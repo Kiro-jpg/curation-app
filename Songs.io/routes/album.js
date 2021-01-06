@@ -3,7 +3,7 @@ var router = express.Router();
 const Album = require('../models/album');
 
 /* GET home page. */
-router.get('/album', (req, res) => {
+router.get('/create-album', (req, res) => {
   const album = new Album({
     name: 'alburat',
     description: 'tartar',
@@ -43,10 +43,10 @@ router.get('/single-album', (req,res) =>{
 
 });
 
-router.get('/album', (req,res) =>{
+router.get('/albumer', (req,res) =>{
   Album.find()
   .then((result) =>{
-    res.render('album', { title:'All Albums', playlist: result})
+    res.render('album.ejs', { title:'All Albums', album: result})
   })
   .catch((err)=> {
     console.log(err);
