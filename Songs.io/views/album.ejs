@@ -5,27 +5,23 @@
 
 <body>
     <%- include("./partials/navbar.ejs") %>
-
-    <div class="container-fluid">
+    <h1 class="albumtitle">Albums</h1>
+    <div class="container-fluid AlbumContainer">
         <div class="row no-gutters">
             <% if (album.length > 0) { %>
             <% album.forEach(album => { %>
-            <div class="col-md-2">
-                <div class="blocks">
-                    <div class="block">
-                        <div class="overlay">
-                            <img src="http://drh.img.digitalriver.com/DRHM/Storefront/Site/atvi/cm/images/site/play-button-overlay.png"
-                                alt="Play" />
-                        </div>
+            <div class="col-md-3 Allalbum">
+                <div class="blocks AlbumCon">
+                    <div class="block AlbumCon2">
                         <img src="<%= album.image %>" alt="Image" />
-                        <h2><%=album.title %></h2>
-                        <p><%= album.description %></p>
+                        <h2 class="AlbumTitle"><%=album.title %></h2>
+                        <p class="AlbumDescription"><%= album.description %></p>
                     </div>
                 </div>
             </div>
             <% }) %>
             <% } else { %>
-            <p>There are no playlists to display...</p>
+            <p>There are no Albums to display...</p>
             <% } %>
         </div>
     </div>
