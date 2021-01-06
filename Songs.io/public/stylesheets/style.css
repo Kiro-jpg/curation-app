@@ -450,6 +450,10 @@ a {
   margin-top: 20px;
 }
 
+.single {
+  text-decoration: none;
+}
+
 .image {
   margin-top: 20px;
   margin-left: 20px;
