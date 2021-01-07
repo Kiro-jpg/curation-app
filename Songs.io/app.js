@@ -4,7 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+var passport = require("passport");
+var bodyParser = require("body-parser");
+var LocalStrategy = require("passport-local");
 
+
+var User = require("./models/users"); 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var aboutRouter = require('./routes/about');
@@ -47,7 +52,12 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended:true }));
 
 // routes
-
+app.use(passport.initialize()); 
+app.use(passport.session()); 
+  
+passport.use(new LocalStrategy(User.authenticate())); 
+passport.serializeUser(User.serializeUser()); 
+passport.deserializeUser(User.deserializeUser()); 
 
 app.use(indexRouter);
 app.use(usersRouter);
@@ -58,10 +68,19 @@ app.use(playlistRouter);
 app.use(createRouter);
 
 
+// login route
+app.get("/login", function (req, res) { 
+  res.render('login', { user : req.user });
+}); 
+
+router.post('/login', passport.authenticate('local'), function(req, res) {
+  res.redirect('/');
+});
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
 
 // error handler
 app.use(function (err, req, res, next) {
