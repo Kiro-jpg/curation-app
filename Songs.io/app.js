@@ -17,6 +17,7 @@ var albumRouter = require('./routes/album');
 var artistRouter = require('./routes/artist');
 var playlistRouter = require('./routes/playlist');
 var createRouter = require('./routes/create');
+var loginRouter = require('./routes/login');
 // express
 var app = express();
 
@@ -27,7 +28,7 @@ var app = express();
 const port = 3000;
 
 // database
-const dbURL = 'mongodb+srv://josh:Test1234@groovy.x687l.mongodb.net/groovy-db?retryWrites=true&w=majority'
+const dbURL = 'mongodb+srv://josh:test1234@groovy.x687l.mongodb.net/groovy-db?retryWrites=true&w=majority'
 mongoose.connect(dbURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -66,20 +67,10 @@ app.use(albumRouter);
 app.use(artistRouter);
 app.use(playlistRouter);
 app.use(createRouter);
+app.use(loginRouter);
 
 
-// login route
-app.get("/login", function (req, res) { 
-  res.render('login', { user : req.user });
-}); 
 
-router.post('/login', passport.authenticate('local'), function(req, res) {
-  res.redirect('/');
-});
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
-});
 
 
 // error handler

@@ -5,9 +5,9 @@ const Playlist = require('../models/playlists');
 /* GET home page. */
 router.get('/create', (req, res) => {
   const playlist = new Playlist({
-    title: 'modtakels2',
-    description: 'tae',
-    image: 'ihi'
+    title: 'test title',
+    description: 'this is a test description for the playlist',
+    image: 'image link'
   });
 
   playlist.save()
