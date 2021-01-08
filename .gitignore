@@ -4344,6 +4344,3 @@ Songs.io/node_modules/yallist/LICENSE
 Songs.io/node_modules/yallist/package.json
 Songs.io/node_modules/yallist/README.md
 Songs.io/node_modules/yallist/yallist.js
-Songs.io/routes/login.js
-Songs.io/views/login.ejs
-Songs.io/views/partials/nav-search.ejs
