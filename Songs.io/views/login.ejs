@@ -6,15 +6,13 @@
 <body>
     <%- include("./partials/nav-search.ejs") %>
 
-    <div class="container-login" style="margin-top: 10rem;">
-        <h1>login</h1>
-
-        <form action="/login" method="POST">
-            <input type="text" name="username" placeholder="username">
-            <input type="password" name="password" placeholder="password">
-            <button>login</button>
+    <div class="container-login logCon">
+        <img src="/logo/Groovy.png" class="GroovyLogo3">
+        <form action="/login"  class="loginForm" method="POST">
+            <input type="text" id="username" name="username" placeholder="username">
+            <input type="password" id="password" name="password" placeholder="password">
+            <button class="button3">login</button>
         </form>
-
     </div>
 </body>
 

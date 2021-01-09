@@ -5,19 +5,17 @@
 
 <body>
     <%- include("./partials/nav-search.ejs") %>
-
-    <div class="create-playlist content">
+    <div class="create-playlist Formcontainer">
+        <img src="/logo/Groovy.png" class="GroovyLogo2">
         <form action="/playlist" method="POST" class="formcontent">
             <label for="title" class="titleform">Playlist title:</label>
-            <input type="text" id="title" name="title" required>
+            <input type="text" id="title" name="title" placeholder="Playlist Title" required>
             <label for="description" class="descriptionform"> Playlist description: </label>
-            <input type="text" id="description" name="description" required>
+            <input type="text" id="description" name="description" placeholder="Playlist Description" required>
             <label for="image" class="imageform">Playlist image: </label>
-            <input type="text" id="image" name="image" required>
-            <button>Create</button>
-        </form>
+            <input type="text" id="image" name="image" placeholder="Image Link" required>
+            <button class="button button2">Create</button>
     </div>
-
 </body>
 
 </html>
