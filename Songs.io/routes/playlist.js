@@ -32,16 +32,16 @@ router.get('/all-playlist', (req,res) => {
 
 });
 
-router.get('/single-playlist', (req,res) =>{
-  Playlist.findById('5ff30ba9eb65fb3e68ca936d')
-  .then((result) =>{
-    res.send(result)
+router.get('/playlist/:id', (req, res) =>{
+  const id = params.id;
+  Playlist.findById(id)
+  .then(result =>{
+    res.render('details', {playlist: result, title: 'Groovy | Playlist'})
   })
-  .catch((err)=> {
+  .catch(err =>{
     console.log(err);
-  });
-
-});
+  })
+})
 
 router.get('/playlist', (req,res) =>{
   Playlist.find()
