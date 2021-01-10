@@ -8,10 +8,29 @@
 
     <!--take up single values from artist, album, playlist-->
 
-    <div class="container">
-        <h2><%= artist.name %> </h2>
-    </div>
+    <div class="singleArtistcon">
+        <h1 class="artistname2"><%= artist.name %></h1>
+        <div class="singleArtistcon2">
+            <div class="card bg-transparent songcon">
+                <div class="songcontainer">
+                    <a class="single" href=""></a>
+                    <img class="image" height="50px" width="50px" src=""></img>
+                    </a>
+                    <div class="songTitle">
+                        <a class="single" href="">
+                            <p class="songs" style="margin: 0;">Titimonapakalaki</p>
+                        </a>
+                        <p class="songartist" style="margin: 0;">Drake</p>
+                        <div class="songslength">
+                            <p class="songtime">3:30</p>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+        <img src="<%= artist.image %>" class="artistbg" alt="">
+    </div>
 </body>
 
 </html>
