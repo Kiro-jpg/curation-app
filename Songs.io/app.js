@@ -8,12 +8,10 @@ var passport = require("passport");
 var bodyParser = require("body-parser");
 var LocalStrategy = require("passport-local");
 var bcrypt = require('bcryptjs');
-var expressLayouts = require('express-ejs-layouts')
 var flash = require('connect-flash');
 var session = require('express-session')
 
 
-var User = require("./models/users"); 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var aboutRouter = require('./routes/about');
@@ -24,6 +22,8 @@ var createRouter = require('./routes/create');
 var loginRouter = require('./routes/login');
 var registerrouter = require('./routes/register');
 var passport = require('passport');
+
+
 // express
 var app = express();
 
