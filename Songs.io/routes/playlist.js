@@ -20,28 +20,17 @@ router.get('/create', (req, res) => {
 
 });
 
-router.get('/all-playlist', (req,res) => {
-
-  Playlist.find()
-  .then((result) =>{
-    res.send(result);
-  })
-  .catch((err) =>{
-    console.log(err);
-  });
-
-});
-
 router.get('/playlist/:id', (req, res) =>{
-  const id = params.id;
+  const id = req.params.id;
   Playlist.findById(id)
   .then(result =>{
-    res.render('details', {playlist: result, title: 'Groovy | Playlist'})
+    res.render('details.ejs', {playlist: result, title: 'Groovy | Playlist'})
   })
   .catch(err =>{
     console.log(err);
   })
 })
+
 
 router.get('/playlist', (req,res) =>{
   Playlist.find()
