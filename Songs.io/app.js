@@ -8,6 +8,7 @@ var passport = require("passport");
 var bodyParser = require("body-parser");
 var LocalStrategy = require("passport-local");
 var bcrypt = require('bcryptjs');
+var expressLayouts = require('express-ejs-layouts')
 
 
 var User = require("./models/users"); 
@@ -43,7 +44,7 @@ mongoose.connect(dbURL, {
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.use(expressLayouts);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({
