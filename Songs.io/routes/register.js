@@ -6,7 +6,6 @@ const bcrypt = require('bcryptjs');
 
 router.get("/register", function (req, res) {
   res.render('register.ejs', {
-    user: req.user,
     title: "Register",
   });
 });
