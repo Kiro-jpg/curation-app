@@ -192,6 +192,30 @@ a {
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 5px 5px 0 rgba(255, 65, 223, 0.788);
 }
 
+.button5 {
+  background-color: #141414;
+  height: 40px;
+  width: 80px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  margin-top: 5rem;
+}
+
+.button5:hover {
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 5px 5px 0 rgba(255, 65, 223, 0.788);
+}
+
+.btncontainer {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+}
+
 .information {
   display: grid;
 }
@@ -217,7 +241,6 @@ a {
   left: 0;
   width: 100px;
   height: 100px;
-  border-radius: 50%;
   box-shadow: 0 0 0 5px #151515, inset 0 0 0 5px #000000, inset 0 0 0 5px #000000, inset 0 0 0 5px #000000, inset 0 0 0 5px #000000;
   background: rgb(255, 255, 255);
   overflow: hidden;
@@ -311,8 +334,6 @@ a {
 
 .playlist {
   position: relative;
-  left: -300px;
-  width: calc(250px / 3);
   text-align: center;
   color: white;
   animation: fadeInMove 2s;
@@ -788,8 +809,8 @@ a {
 
 /* details.ejs */
 
-menu {
-  background: #5bc995;
+.menu {
+  background: #141414;
   height: 100vh;
   width: 240px;
   position: fixed;
@@ -797,25 +818,26 @@ menu {
   left: 0;
   z-index: 5;
   outline: none;
+  -webkit-box-shadow: 9px 0px 15px -5px rgba(251, 63, 148, 1);
+  -moz-box-shadow: 9px 0px 15px -5px rgba(251, 63, 148, 1);
+  box-shadow: 9px 0px 15px -5px rgba(251, 63, 148, 1);
 }
 
 .menu .avatar {
   background: rgba(0, 0, 0, 0.1);
   padding: 2em 0.5em;
-  text-align: center;
+  padding-left: 2rem;
 }
 
 .menu .avatar img {
   width: 100px;
-  border-radius: 50%;
   overflow: hidden;
-  border: 4px solid #ffea92;
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
 }
 
 .menu .avatar h2 {
   font-weight: normal;
   margin-bottom: 0;
+  color: white;
 }
 
 .menu ul {
