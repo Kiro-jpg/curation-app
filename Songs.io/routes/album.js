@@ -54,4 +54,15 @@ router.get('/albumer', (req,res) =>{
 
 });
 
+router.get('/albumer/:id', (req, res) =>{
+  const id = req.params.id;
+  Album.findById(id)
+  .then(result =>{
+    res.render('details.ejs', {album: result, title: 'Groovy | Album'})
+  })
+  .catch(err =>{
+    console.log(err);
+  })
+})
+
 module.exports = router;

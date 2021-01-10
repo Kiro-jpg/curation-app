@@ -14,7 +14,8 @@
                 <div class="blocks AlbumCon">
                     <div class="block AlbumCon2">
                         <img src="<%= album.image %>" alt="Image" />
-                        <h2 class="AlbumTitle"><%=album.title %></h2>
+                        <h5 class="AlbumTitle"><a href="/albumer/<%= album._id %>"
+                                class="albumclick"><%=album.name %></a></h5>
                         <p class="AlbumDescription"><%= album.description %></p>
                     </div>
                 </div>

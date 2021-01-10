@@ -648,6 +648,15 @@ a {
   font-size: 75px;
 }
 
+.AlbumTitle {
+  margin-top: .3rem;
+}
+
+.albumclick {
+  text-decoration: none;
+  color: white;
+}
+
 .Allalbum .blocks {
   position: relative;
   display: flex;
