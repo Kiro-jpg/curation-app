@@ -11,7 +11,7 @@ var bcrypt = require('bcryptjs');
 var flash = require('connect-flash');
 var session = require('express-session')
 
-
+// Routes require
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var aboutRouter = require('./routes/about');
@@ -24,17 +24,17 @@ var registerrouter = require('./routes/register');
 var passport = require('passport');
 
 
-// express
+// Express
 var app = express();
 
-//Passport Config
+// Passport Config
 require('./config/passport')(passport);
 
 
-// port
+// Port
 const port = 3000;
 
-// database
+// Database
 const dbURL = 'mongodb+srv://josh:test1234@groovy.x687l.mongodb.net/groovy-db?retryWrites=true&w=majority'
 mongoose.connect(dbURL, {
   useNewUrlParser: true,
@@ -46,7 +46,7 @@ mongoose.connect(dbURL, {
 
 
 
-// view engine setup
+// View Engine Setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(logger('dev'));
@@ -58,10 +58,10 @@ app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended:true }));
 
-// bodyparser
+// Bodyparser
 app.use(express.urlencoded({ extended: false}));
 
-// express session
+// Express session
 app.use(session({
   secret: 'secret',
   resave: true,
@@ -71,17 +71,17 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// connect flash
+// Connect flash
 app.use(flash());
 
-// global var
+// Global var
 app.use((req, res, next) =>{
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   next();
 })
-// routes
 
+// Routes
 app.use(indexRouter);
 app.use(usersRouter);
 app.use(aboutRouter);
@@ -93,13 +93,13 @@ app.use(loginRouter);
 app.use(registerrouter);
 
 
-// catch 404 and forward to error handler
+// Catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
 });
 
 
-// error handler
+// Error handler
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
@@ -109,16 +109,5 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 })
-
-
-// basic routes
-app.get('/', (req, res) => {
-  res.send('HAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHA')
-})
-
-
-
-
-
 
 module.exports = app;
