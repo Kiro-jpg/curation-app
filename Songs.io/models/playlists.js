@@ -16,7 +16,7 @@ const playlistSchema = new Schema({
     },
     songs: {
         type: Array
-    } 
+    }
     
 }, {timestamps: true});
 

@@ -7,9 +7,11 @@
     <%- include("./partials/nav-search.ejs") %>
 
     <div class="container-login logCon">
+       
         <img src="/logo/Groovy.png" class="GroovyLogo3">
         <form action="/login"  class="loginForm" method="POST">
-            <input type="text" id="username" name="username" placeholder="username">
+            <%- include ("./partials/messages.ejs"); %>
+            <input type="email" id="email" name="email" placeholder="email">
             <input type="password" id="password" name="password" placeholder="password">
             <button class="button3">login</button>
         </form>
