@@ -23,10 +23,12 @@ var playlistRouter = require('./routes/playlist');
 var createRouter = require('./routes/create');
 var loginRouter = require('./routes/login');
 var registerrouter = require('./routes/register');
+var passport = require('passport');
 // express
 var app = express();
 
-
+//Passport Config
+require('./config/passport')(passport);
 
 
 // port
@@ -47,7 +49,6 @@ mongoose.connect(dbURL, {
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use(expressLayouts);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({
@@ -67,6 +68,9 @@ app.use(session({
   saveUninitialized: true,
 }));
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 // connect flash
 app.use(flash());
 
@@ -77,12 +81,6 @@ app.use((req, res, next) =>{
   next();
 })
 // routes
-app.use(passport.initialize()); 
-app.use(passport.session()); 
-  
-passport.use(new LocalStrategy(User.authenticate())); 
-passport.serializeUser(User.serializeUser()); 
-passport.deserializeUser(User.deserializeUser()); 
 
 app.use(indexRouter);
 app.use(usersRouter);
