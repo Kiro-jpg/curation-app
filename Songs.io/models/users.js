@@ -13,9 +13,5 @@ const usersSchema = new Schema({
     }
 }, {timestamps: true});
 
-usersSchema.methods.authenticate = function(password) {
-    //implementation code goes here
-  }
-
-usersSchema.plugin(passportLocalMongoose);
-module.exports = mongoose.model('User', usersSchema);
+const User = mongoose.model('User', usersSchema)
+module.exports = User;

@@ -7,6 +7,7 @@ var mongoose = require('mongoose');
 var passport = require("passport");
 var bodyParser = require("body-parser");
 var LocalStrategy = require("passport-local");
+var bcrypt = require('bcryptjs');
 
 
 var User = require("./models/users"); 
