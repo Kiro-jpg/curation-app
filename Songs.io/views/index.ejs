@@ -29,7 +29,13 @@
                                     alt="Lucas">
                             </div>
                             <div class="name">
-                                <a href="/users" target="_blank">Lucas</a>
+                                <% if (user.length > 0) { %>
+                                    <% user.forEach(user => { %>
+                                <a href="/users" target="_blank"><%= user.name %></a>
+                                <% }) %>
+  <% } else { %>
+  <p>There are no user to display...</p>
+  <% } %>
                             </div>
                             <div class="ds-info information">
                                 <div class="container ds playlist">

@@ -1,10 +1,13 @@
 var express = require('express');
 var router = express.Router();
-const User = require('../models/users');
-const bcrypt = require('bcryptjs');
+var User = require('../models/users');
+var bcrypt = require('bcryptjs');
 
 
-router.get("/register", function (req, res) {
+const { forwardAuthenticated } = require('../config/auth');
+
+
+router.get("/register",  forwardAuthenticated, (req, res) =>{
   res.render('register.ejs', {
     title: "Register",
   });
@@ -25,7 +28,8 @@ router.post('/register', (req, res) =>{
     }
 
     if(errors.length > 0){
-      res.render('register', {
+      res.render('register.ejs', {
+        title: "Register",
         errors,
         name,
         email,
@@ -33,7 +37,7 @@ router.post('/register', (req, res) =>{
         username,
         password2
       });
-    }else{
+    } else {
       User.findOne({email:email})
       .then(user => {
         if(user){
@@ -59,7 +63,7 @@ router.post('/register', (req, res) =>{
           });
           // Hashing
 
-          bcrypt.genSalt(10, (err,salt) => 
+          bcrypt.genSalt(10, (err, salt) => {
             bcrypt.hash(newUser.password, salt, (err,hash) =>{
               if(err) throw err;
               // Set password to hash
@@ -71,17 +75,13 @@ router.post('/register', (req, res) =>{
                 res.redirect('/login');
               })
               .catch(err => console.log(err));
-          }))
-        }
+          });
+        });
 
-      });
-      
     }
-
-
-    })
-
-
-
+      
+    });
+    }
+});
 
 module.exports = router;
