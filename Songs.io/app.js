@@ -9,6 +9,8 @@ var bodyParser = require("body-parser");
 var LocalStrategy = require("passport-local");
 var bcrypt = require('bcryptjs');
 var expressLayouts = require('express-ejs-layouts')
+var flash = require('connect-flash');
+var session = require('express-session')
 
 
 var User = require("./models/users"); 
@@ -20,6 +22,7 @@ var artistRouter = require('./routes/artist');
 var playlistRouter = require('./routes/playlist');
 var createRouter = require('./routes/create');
 var loginRouter = require('./routes/login');
+var registerrouter = require('./routes/register');
 // express
 var app = express();
 
@@ -54,6 +57,25 @@ app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended:true }));
 
+// bodyparser
+app.use(express.urlencoded({ extended: false}));
+
+// express session
+app.use(session({
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: true,
+}));
+
+// connect flash
+app.use(flash());
+
+// global var
+app.use((req, res, next) =>{
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  next();
+})
 // routes
 app.use(passport.initialize()); 
 app.use(passport.session()); 
@@ -70,6 +92,7 @@ app.use(artistRouter);
 app.use(playlistRouter);
 app.use(createRouter);
 app.use(loginRouter);
+app.use(registerrouter);
 
 
 // catch 404 and forward to error handler
