@@ -13,6 +13,10 @@ const albumSchema = new Schema({
     description:{
         type: String,
         required: false
+    },
+    snippet:{
+        type: String,
+        required: false
     }
 }, {timestamps: true});
 

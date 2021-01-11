@@ -9,6 +9,10 @@ const artistSchema = new Schema({
     image:{
         type: String,
         required: false
+    },
+    bg:{
+        type: String,
+        required: true
     }
 
 }, {timestamps: true});

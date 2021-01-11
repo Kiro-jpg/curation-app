@@ -13,7 +13,7 @@
     <div class="singleAlbumcon">
 
         <div class="container-fluid headerimg g-0">
-            <img src="https://hips.hearstapps.com/esq.h-cdn.co/assets/16/34/1280x640/landscape-1471899280-frank-ocean-graphic-2.gif?resize=980:*"
+            <img src="<%= album.bg %> "
                 class="headpic" width="100%" style="background-size:contain;">
         </div>
 
@@ -21,7 +21,7 @@
             <img style="margin-right: 2rem; height: 500px; width:500px;" src=" <%= album.image %>" alt="Image" />
             <div class="namedescription">
                 <h1 class="singlealbumname" style="margin:0;"><%= album.name %></h1>
-                <p class="songalbum" style="margin: 0;"><%= album.description %></p>
+                <p class="songalbum" style="margin: 0;"><%= album.snippet %></p>
 
                 <div class="singleAlbumcon2">
                     <div class="card bg-transparent songcon2" style="border:none;">
@@ -32,7 +32,7 @@
                             </a>
                             <div class="songTitle2">
                                 <a class="single" href="">
-                                    <p class="songs2" style="margin: 0;">Titimonapakalaki</p>
+                                    <p class="songs2" style="margin: 0;">Ill intentions</p>
                                 </a>
                                 <p class="songartist2" style="margin: 0;">Drake</p>
                                 <div class="songslength2">
