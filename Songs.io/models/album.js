@@ -17,6 +17,10 @@ const albumSchema = new Schema({
     snippet:{
         type: String,
         required: false
+    },
+    bg:{
+        type: String,
+        required: false
     }
 }, {timestamps: true});
 
