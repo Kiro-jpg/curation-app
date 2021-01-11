@@ -1126,7 +1126,6 @@ a {
 }
 
 .namedescription {
-  margin-left: 1rem;
   display: grid;
   width: 100%;
 }
@@ -1154,7 +1153,6 @@ a {
 
 .headerimg {
   height: 500px;
-  width: 500px;
 
   overflow: hidden;
 }
