@@ -1041,6 +1041,13 @@ a {
   position: relative;
 }
 
+.singleAlbumcon {
+  height: 100vh;
+  width: calc(100% - 183.3px);
+  float: right;
+  position: relative;
+}
+
 .singleArtistcon2 {
   min-height: max-content;
   width: calc(100% - 763.2px);
