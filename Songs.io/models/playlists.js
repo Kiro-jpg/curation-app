@@ -19,7 +19,7 @@ const playlistSchema = new Schema({
     },
     creators: {
         type: String,
-        required: true
+        required: false
     }
 
 }, {
