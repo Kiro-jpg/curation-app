@@ -1457,6 +1457,7 @@ a {
   margin-top: 4rem;
   font-size: 125px;
   font-weight: 900;
+
 }
 
 .playlistDescription2 {
@@ -1525,5 +1526,5 @@ a {
 
 .namedescription2 {
   display: grid;
-  width: 50%;
+  width: 100%;
 }
