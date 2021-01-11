@@ -17,7 +17,7 @@ const playlistSchema = new Schema({
     songs: {
         type: Array
     },
-    creators: {
+    creator: {
         type: String,
         required: false
     }
