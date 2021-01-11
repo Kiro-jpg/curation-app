@@ -3,22 +3,28 @@ const Schema = mongoose.Schema;
 
 const playlistSchema = new Schema({
     title: {
-        type: String, 
+        type: String,
         required: true
     },
-    description:{
+    description: {
         type: String,
         required: false
     },
-    image:{
+    image: {
         type: String,
         required: false
     },
     songs: {
         type: Array
+    },
+    creators: {
+        type: String,
+        required: true
     }
-    
-}, {timestamps: true});
+
+}, {
+    timestamps: true
+});
 
 const Playlist = mongoose.model('Playlist', playlistSchema);
 module.exports = Playlist;
