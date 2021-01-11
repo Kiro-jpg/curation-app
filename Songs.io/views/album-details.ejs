@@ -8,29 +8,47 @@
 
     <!--take up single values from artist, album, playlist-->
 
+
+
     <div class="singleAlbumcon">
-        <img height="100px" width="100px" src="<%= album.image %>" class="albumimg" alt="Image" />
-        <h1 class="singleplaylistname"><%= album.name %></h1>
-        <p class="songartist" style="margin: 0;"><%= album.description %></p>
-        <div class="singleArtistcon2">
-            <div class="card bg-transparent songcon">
-                <div class="songcontainer">
-                    <a class="single" href=""></a>
-                    <img class="image" height="50px" width="50px" src=""></img>
-                    </a>
-                    <div class="songTitle">
-                        <a class="single" href="">
-                            <p class="songs" style="margin: 0;">Titimonapakalaki</p>
-                        </a>
-                        <p class="songartist" style="margin: 0;">Drake</p>
-                        <div class="songslength">
-                            <p class="songtime">3:30</p>
+
+        <div class="container-fluid headerimg">
+            <img src="https://hips.hearstapps.com/esq.h-cdn.co/assets/16/34/1280x640/landscape-1471899280-frank-ocean-graphic-2.gif?resize=980:*"
+                class="headpic" width="100%" style="background-size:contain;">
+        </div>
+
+        <div class="albumheadercon">
+            <img height="500px" width="500px" src="<%= album.image %>" alt="Image" />
+            <div class="namedescription">
+                <h1 class="singlealbumname" style="margin:0;"><%= album.name %></h1>
+                <p class="songalbum" style="margin: 0;"><%= album.description %></p>
+
+                <div class="singleAlbumcon2">
+                    <div class="card bg-transparent songcon2" style="border:none;">
+                        <div class="songcontainer">
+                            <a class="single" href=""></a>
+                            <img class="image" height="50px" width="50px" style="margin-left:0;"
+                                src="<%= album.image %>"></img>
+                            </a>
+                            <div class="songTitle2">
+                                <a class="single" href="">
+                                    <p class="songs2" style="margin: 0;">Titimonapakalaki</p>
+                                </a>
+                                <p class="songartist2" style="margin: 0;">Drake</p>
+                                <div class="songslength2">
+                                    <p class="songtime2">3:30</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
+
         </div>
+
+
+
+
     </div>
 </body>
 
