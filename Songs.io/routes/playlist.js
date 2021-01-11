@@ -24,7 +24,7 @@ router.get('/playlist/:id', (req, res) =>{
   const id = req.params.id;
   Playlist.findById(id)
   .then(result =>{
-    res.render('details.ejs', {playlist: result, title: 'Groovy | Playlist'})
+    res.render('playlist-details.ejs', {playlist: result, title: 'Groovy | Playlist'})
   })
   .catch(err =>{
     console.log(err);

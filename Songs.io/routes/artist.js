@@ -54,7 +54,7 @@ router.get('/artist/:id', (req, res) =>{
   const id = req.params.id;
   Artist.findById(id)
   .then(result =>{
-    res.render('details.ejs', {artist: result, title: 'Groovy | Artist'})
+    res.render('artist-details.ejs', {artist: result, title: 'Groovy | Artist'})
   })
   .catch(err =>{
     console.log(err);
