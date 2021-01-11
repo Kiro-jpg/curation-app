@@ -1046,10 +1046,11 @@ a {
 }
 
 .singleAlbumcon {
-  height: 100vh;
+  min-height: 100vh;
   width: calc(100% - 183.3px);
   float: right;
   position: relative;
+  margin-bottom: 3rem;
 }
 
 .singleArtistcon2 {
