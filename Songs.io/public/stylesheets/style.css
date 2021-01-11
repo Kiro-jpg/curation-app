@@ -1420,109 +1420,110 @@ a {
   .menu2:focus .smartphone-menu-trigger {
     pointer-events: none;
   }
+}
 
-  .singlePlaylistcon {
-    min-height: 100vh;
-    width: calc(100% - 183.3px);
-    float: right;
-    position: relative;
-    margin-bottom: 3rem;
-  }
+.singlePlaylistcon {
+  min-height: 100vh;
+  width: calc(100% - 183.3px);
+  float: right;
+  position: relative;
+  margin-bottom: 3rem;
+}
 
-  .singleArtistcon2 {
-    min-height: max-content;
-    width: calc(100% - 763.2px);
-    float: right;
-    position: absolute;
-    top: 15rem;
-    margin-left: 5rem;
-    color: white;
-    display: flex;
-  }
+.singleArtistcon2 {
+  min-height: max-content;
+  width: calc(100% - 763.2px);
+  float: right;
+  position: absolute;
+  top: 15rem;
+  margin-left: 5rem;
+  color: white;
+  display: flex;
+}
 
-  .artistheadercon {
-    display: flex;
-    margin-left: 2rem;
-    margin-top: 2rem;
-  }
+.artistheadercon {
+  display: flex;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
 
-  .namedescription {
-    display: grid;
-    width: 100%;
-  }
+.namedescription {
+  display: grid;
+  width: 100%;
+}
 
-  .singleplaylistname {
-    color: White;
-    margin-top: 4rem;
-    font-size: 125px;
-    font-weight: 900;
-  }
+.singleplaylistname {
+  color: White;
+  margin-top: 4rem;
+  font-size: 125px;
+  font-weight: 900;
+}
 
-  .playlistDescription2 {
-    color: White;
-    font-size: 25px;
-    margin-bottom: 10rem;
-  }
+.playlistDescription2 {
+  color: White;
+  font-size: 25px;
+  margin-bottom: 10rem;
+}
 
-  .followbtn {
-    height: 50px;
-    width: 100px;
-    border-radius: 30px;
-    border: none;
-  }
+.followbtn {
+  height: 50px;
+  width: 100px;
+  border-radius: 30px;
+  border: none;
+}
 
-  .singlePlaylistcon2 {
-    min-height: fit-content;
-    width: calc(100% - 455px);
-    margin-left: 14rem;
-    color: white;
-    display: flex;
-    margin-top: 1rem;
-    border-bottom: 2px solid gray;
-    padding-bottom: .5rem;
-  }
+.singlePlaylistcon2 {
+  min-height: fit-content;
+  width: calc(100% - 455px);
+  margin-left: 14rem;
+  color: white;
+  display: flex;
+  margin-top: 1rem;
+  border-bottom: 2px solid gray;
+  padding-bottom: .5rem;
+}
 
-  .songTitle3 {
-    display: grid;
-    margin-left: 1rem;
-  }
+.songTitle3 {
+  display: grid;
+  margin-left: 1rem;
+}
 
-  .songartist3 {
-    color: white;
-    font-family: 'lato', sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-  }
+.songartist3 {
+  color: white;
+  font-family: 'lato', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+}
 
-  .songs3 {
-    color: white;
-    font-family: 'lato', sans-serif;
-    font-size: 20px;
-    padding-top: 1rem;
-    font-weight: 400;
-  }
+.songs3 {
+  color: white;
+  font-family: 'lato', sans-serif;
+  font-size: 20px;
+  padding-top: 1rem;
+  font-weight: 400;
+}
 
-  .songtime3 {
-    margin-top: 2.3rem;
-    margin-left: 47rem;
-    color: white;
-    font-family: 'lato', sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-  }
+.songtime3 {
+  margin-top: 2.3rem;
+  margin-left: 47rem;
+  color: white;
+  font-family: 'lato', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+}
 
-  .songslength3 {
-    position: absolute;
-    height: 50px;
-  }
+.songslength3 {
+  position: absolute;
+  height: 50px;
+}
 
-  .playlistheadercon {
-    display: flex;
-    margin-left: 2rem;
-    margin-top: 2rem;
-  }
+.playlistheadercon {
+  display: flex;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
 
-  .namedescription2 {
-    display: grid;
-    width: 50%;
-  }
+.namedescription2 {
+  display: grid;
+  width: 50%;
+}
