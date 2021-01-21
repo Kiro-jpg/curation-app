@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const Songs = require('/songs').schema
+const Songs = require('./songs').schema
 
 const playlistSchema = new Schema({
     title: {
@@ -22,9 +22,9 @@ const playlistSchema = new Schema({
         type: String,
         required: false
     },
-    song:{
+    song: {
         type: [Songs],
-        required: true
+        required: false
     }
 
 }, {
