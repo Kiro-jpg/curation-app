@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const Songs = require('/songs').schema
 
 const artistSchema = new Schema({
     name: {
@@ -12,6 +13,10 @@ const artistSchema = new Schema({
     },
     bg:{
         type: String,
+        required: true
+    },
+    song:{
+        type: [Songs],
         required: true
     }
 

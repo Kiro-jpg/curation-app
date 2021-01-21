@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const Songs = require('/songs').schema
 
 const playlistSchema = new Schema({
     title: {
@@ -20,6 +21,10 @@ const playlistSchema = new Schema({
     creator: {
         type: String,
         required: false
+    },
+    song:{
+        type: [Songs],
+        required: true
     }
 
 }, {
