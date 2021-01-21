@@ -15,10 +15,7 @@ const artistSchema = new Schema({
         type: String,
         required: true
     },
-    song: {
-        type: [Songs],
-        required: false
-    }
+    song: [Songs]
 
 }, {
     timestamps: true

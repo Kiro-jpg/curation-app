@@ -15,18 +15,11 @@ const playlistSchema = new Schema({
         type: String,
         required: false
     },
-    songs: {
-        type: Array
-    },
     creator: {
         type: String,
         required: false
     },
-    song: {
-        type: [Songs],
-        required: false
-    }
-
+    song: [Songs]
 }, {
     timestamps: true
 });
