@@ -19,6 +19,9 @@ const playlistSchema = new Schema({
         type: String,
         required: false
     },
+    followers: {
+        type: Number
+    },
     song: [Songs]
 }, {
     timestamps: true
