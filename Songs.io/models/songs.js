@@ -6,7 +6,7 @@ const songSchema = new Schema({
         type: String
     },
     duration: {
-        type: Number
+        type: String
     },
     artist: {
         type: String
