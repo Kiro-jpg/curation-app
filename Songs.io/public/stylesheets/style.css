@@ -692,6 +692,54 @@ a {
   padding-left: 4rem;
 }
 
+.AlbumCon .AlbumCon2 {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  transform: perspective(600px) rotateY(-30deg);
+  transition: transform 0.3s;
+}
+
+.AlbumCon .AlbumCon2 img {
+  width: auto;
+  max-width: 100%;
+}
+
+.AlbumCon .AlbumCon2 .overlay {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.AlbumCon .AlbumCon2 .overlay img {
+  width: auto;
+  max-width: 50%;
+}
+
+.AlbumCon .AlbumCon2.hover,
+.AlbumCon .AlbumCon2:hover {
+  transform: rotateY(0);
+  cursor: pointer;
+}
+
+.AlbumCon .AlbumCon2.hover .overlay,
+.AlbumCon .AlbumCon2:hover .overlay {
+  opacity: 1;
+}
+
 /* Artist */
 
 
