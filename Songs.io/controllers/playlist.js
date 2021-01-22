@@ -45,7 +45,7 @@ exports.get_playlist = function (req, res) {
 
 };
 
-router.post('/playlist', (req, res) => {
+exports.post_playlist = function (req, res) {
     const playlist = new Playlist(req.body);
 
     playlist.save()
@@ -56,4 +56,4 @@ router.post('/playlist', (req, res) => {
             console.log(err);
         });
 
-});
+};
