@@ -69,7 +69,7 @@ p {
 }
 
 /*Playlists*/
-.blocks {
+.genPlaylist {
   position: relative;
   display: flex;
   align-items: left;
@@ -78,7 +78,7 @@ p {
   padding-left: 4rem;
 }
 
-.blocks .block {
+.genPlaylist .homeplaylist {
   position: relative;
   display: block;
   width: 200px;
@@ -88,12 +88,12 @@ p {
   transition: transform 0.3s;
 }
 
-.blocks .block img {
+.genPlaylist .homeplaylist img {
   width: auto;
   max-width: 100%;
 }
 
-.blocks .block .overlay {
+.genPlaylist .homeplaylist .overlay {
   position: fixed;
   display: flex;
   align-items: center;
@@ -110,19 +110,19 @@ p {
   transform: translate3d(0, 0, 0);
 }
 
-.blocks .block .overlay img {
+.genPlaylist .homeplaylist .overlay img {
   width: auto;
   max-width: 50%;
 }
 
-.blocks .block.hover,
-.blocks .block:hover {
+.genPlaylist .homeplaylist.hover,
+.genPlaylist .homeplaylist:hover {
   transform: rotateY(0);
   cursor: pointer;
 }
 
-.blocks .block.hover .overlay,
-.blocks .block:hover .overlay {
+.genPlaylist .homeplaylist.hover .overlay,
+.genPlaylist .homeplaylist:hover .overlay {
   opacity: 1;
 }
 
@@ -1565,4 +1565,71 @@ a {
 
 .abowt2 {
   margin-left: 5rem;
+}
+
+/*profile*/
+
+.Profilecon {
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 10rem;
+}
+
+.profpic {
+  height: 350px;
+  width: 350px;
+}
+
+.ProfPic {
+  min-width: fit-content;
+  margin-right: 1rem;
+}
+
+
+.Profilecon2 {
+  width: 100%;
+  display: flex;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid gray;
+}
+
+
+
+.Nameuser {
+  color: white;
+  font-weight: 700;
+  font-size: 100px;
+  width: 100%;
+}
+
+.userbio {
+  color: rgb(182, 182, 182);
+  font-size: 20px;
+}
+
+.userfollowers {
+  color: white;
+  font-size: 20px;
+}
+
+.userPlaylist {
+  position: relative;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding-top: 10rem;
+  padding-left: 4rem;
+}
+
+.blocks .userlist {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+.userPlaylist .userlist img {
+  width: auto;
+  max-width: 100%;
 }
