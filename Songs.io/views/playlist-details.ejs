@@ -28,15 +28,20 @@
                     <img class="image" height="50px" width="50px" style="margin-left:0;"
                         src="https://images-ext-2.discordapp.net/external/wV7GwkU_8Ja4lEhFOIRX_CV1xhbsrhx0LPxWN74dKfE/https/images.genius.com/c4b505be7fffccf7719b00c57126f51d.715x715x1.jpg?width=676&height=676"></img>
                     </a>
+                    <% if (playlist.song.length > 0) { %>
                     <div class="songTitle3">
+
                         <a class="single" href="">
-                            <p class="songs3" style="margin: 0;">Ill intentions</p>
+                            <p class="songs3" style="margin: 0;"><%= playlist.song[0].title %></p>
                         </a>
                         <p class="songartist3" style="margin: 0;">Drake</p>
                         <div class="songslength3">
                             <p class="songtime3">3:30</p>
                         </div>
                     </div>
+                    <% } else { %>
+                    <p>test failed</p>
+                    <% }  %>
                 </div>
             </div>
         </div>
