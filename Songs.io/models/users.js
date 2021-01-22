@@ -1,24 +1,28 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const Playlist = require('../models/playlists');
 
 const usersSchema = new Schema({
-    username:{
+    username: {
         type: String,
         required: true
     },
-    password:{
+    password: {
         type: String,
         required: true
     },
-    email:{
+    email: {
         type: String,
         required: true
     },
-    name:{
+    name: {
         type: String,
         required: true
-    }
-}, {timestamps: true});
+    },
+    playlist: [Playlist]
+}, {
+    timestamps: true
+});
 
 const User = mongoose.model('User', usersSchema)
 module.exports = User;

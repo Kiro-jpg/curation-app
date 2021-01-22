@@ -13,6 +13,9 @@ const songSchema = new Schema({
     },
     album: {
         type: String
+    },
+    image: {
+        type: String
     }
 }, {
     timestamps: true

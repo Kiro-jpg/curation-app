@@ -21,30 +21,34 @@
                 <p style="color: white;">Followers: <%= playlist.followers %></p>
             </div>
         </div>
+        <% if (playlist.song.length > 0) { %>
+        <% for (var i = 0; i < playlist.song.length; i++) {%>
         <div class="singlePlaylistcon2">
             <div class="card bg-transparent songcon2" style="border:none;">
                 <div class="songcontainer">
                     <a class="single" href=""></a>
                     <img class="image" height="50px" width="50px" style="margin-left:0;"
-                        src="https://images-ext-2.discordapp.net/external/wV7GwkU_8Ja4lEhFOIRX_CV1xhbsrhx0LPxWN74dKfE/https/images.genius.com/c4b505be7fffccf7719b00c57126f51d.715x715x1.jpg?width=676&height=676"></img>
+                        src="<%= playlist.song[i].image %>"></img>
                     </a>
-                    <% if (playlist.song.length > 0) { %>
+
                     <div class="songTitle3">
 
                         <a class="single" href="">
-                            <p class="songs3" style="margin: 0;"><%= playlist.song[0].title %></p>
+                            <p class="songs3" style="margin: 0;"><%= playlist.song[i].title %></p>
                         </a>
-                        <p class="songartist3" style="margin: 0;">Drake</p>
+                        <p class="songartist3" style="margin: 0;"><%= playlist.song[i].artist %></p>
                         <div class="songslength3">
-                            <p class="songtime3">3:30</p>
+                            <p class="songtime3"><%= playlist.song[i].duration %></p>
                         </div>
                     </div>
-                    <% } else { %>
-                    <p>test failed</p>
-                    <% }  %>
+
                 </div>
             </div>
         </div>
+        <%  }%>
+        <% } else { %>
+        <p>test failed</p>
+        <% }  %>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"

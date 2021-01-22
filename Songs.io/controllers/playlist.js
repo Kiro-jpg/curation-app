@@ -18,11 +18,13 @@ exports.add_follow = function (req, res) {
 
 exports.add_singlelist = function (req, res) {
     const id = req.params.id;
+    var follower = 0;
     Playlist.findById(id)
         .then(result => {
             res.render('playlist-details.ejs', {
                 playlist: result,
-                title: 'Groovy | Playlist'
+                title: 'Groovy | Playlist',
+
             })
         })
         .catch(err => {
