@@ -68,6 +68,10 @@ p {
   width: 100%;
 }
 
+.homeplaylistdisplay {
+  display: flex;
+}
+
 /*Playlists*/
 .genPlaylist {
   position: relative;

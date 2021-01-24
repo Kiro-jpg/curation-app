@@ -18,8 +18,7 @@ const usersSchema = new Schema({
     name: {
         type: String,
         required: true
-    },
-    playlist: [Playlist]
+    }
 }, {
     timestamps: true
 });
