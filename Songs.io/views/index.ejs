@@ -59,17 +59,17 @@
                             </div>
                             <div class="name">
                                 <% if (user.length > 0) { %>
-                                <% user.forEach(user => { %>
-                                <a href="/users/<%= user._id %>" target="_blank"><%= user.name %></a>
-                                <% }) %>
+                                <% for (var i = 0; i < 1; i++) { %>
+                                <a href="/users/<%= user[i]._id %>" target="_blank"><%= user[i].name %></a>
+                                <% } %>
                                 <% } else { %>
                                 <p>There are no user to display...</p>
                                 <% } %>
                             </div>
                             <div class="ds-info information" style="margin-top:2rem ;">
-                                <div class="container ds playlist">
+                                <div class="container ds playlist" style="margin-top: 2rem;">
                                     <h6 title="Number of projects created by the user">Playlist</h6>
-                                    <p>0</p>
+                                    <p><%= user.playlist %></p>
                                 </div>
 
                             </div>
