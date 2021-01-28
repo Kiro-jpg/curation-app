@@ -62,42 +62,11 @@
 <script>
     $("#follow").click(function () {
         var userType = $("p[name=followers]").attr('followcount');
-        alert("xmlvalue is: " + userType);
         $.ajax({
             url: "/follow",
-            method: "get",
+            method: "GET",
             data: userType
         })
-    });
-</script>
-
-<script>
-    $("#delete").on("click", ".trashbtn", function () {
-        {
-            {
-                !--retrieve post and comment id so that we can easily delete chosen comment--
-            }
-        }
-        var data = {}
-        inputs = $(this).parent().find("input")
-        for (i = 0; i < inputs.length; ++i) {
-            data[inputs[i]["name"]] = inputs[i]["value"]
-        }
-
-        var comment_container = $(this).parent()
-
-        $.ajax({
-            url: "/post/delete_comment",
-            method: "post",
-            data: data,
-            success: function (result) {
-                console.log(result)
-                comment_container.remove()
-            },
-            error: function () {
-                alert("Could not remove comment")
-            }
-        });
     });
 </script>
 

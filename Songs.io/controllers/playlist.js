@@ -6,7 +6,7 @@ const Song = require('../models/songs');
 
 exports.add_follow = function (req, res) {
     console.log('im in');
-    const id = req.params.id;
+    const id = req.query.userType;
     Playlist.findById(id).then(result => {
         Playlist.findOneAndUpdate({
             _id: result
@@ -14,9 +14,9 @@ exports.add_follow = function (req, res) {
             $inc: {
                 'followers': 1
             }
-    })
+        })
 
-})
+    })
 };
 
 
