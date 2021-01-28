@@ -58,9 +58,10 @@
 <script>
     $("#follow").click(function () {
         var userType = $("p[name=followers]").attr('followcount');
+        alert("xmlvalue is: " + userType);
         $.ajax({
             url: "/follow",
-            method: "GET",
+            method: "get",
             data: userType
         })
     });
