@@ -499,6 +499,7 @@ a {
 
 .playlistcontainer {
   display: flex;
+  position: absolute;
 }
 
 .titleDescription {
@@ -1141,6 +1142,8 @@ a {
 
 .songcontainer {
   display: flex;
+  position: absolute;
+  margin-left: 3rem;
 }
 
 
@@ -1526,14 +1529,18 @@ a {
 }
 
 .singlePlaylistcon2 {
-  min-height: fit-content;
-  width: calc(100% - 455px);
+  min-height: 80px;
+  width: calc(100% - 725px);
   margin-left: 14rem;
   color: white;
   display: flex;
   margin-top: 1rem;
   border-bottom: 2px solid gray;
   padding-bottom: .5rem;
+}
+
+.singlePlaylistcon2::hover {
+  background-color: rgba(63, 60, 60, 0.247);
 }
 
 .songTitle3 {
@@ -1684,4 +1691,38 @@ a {
 .userPlaylist .userlist img {
   width: auto;
   max-width: 100%;
+}
+
+.trashbtn {
+  height: 40px;
+  width: 75px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 3rem;
+  margin-left: 100rem;
+}
+
+.trash2btn {
+  height: 40px;
+  width: 75px;
+  color: #141414;
+  border-radius: 30px;
+  border: none;
+  margin-top: 1.75rem;
+  margin-left: 58rem;
+}
+
+.trashu {
+  color: white;
+}
+
+.numbersong {
+  color: white;
+  font-family: 'inter', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  padding-top: 2rem;
+  padding-right: 1rem;
+  margin: 0;
+
 }
