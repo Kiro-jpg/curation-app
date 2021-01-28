@@ -63,3 +63,11 @@ exports.post_playlist = function (req, res) {
         });
 
 };
+
+exports.delete_playlist = function (req, res) {
+    Playlist.deleteOne(req.body, function (err, res) {
+        if (err) throw err;
+        console.log(res);
+        console.log("Playlist deleted")
+    })
+};
