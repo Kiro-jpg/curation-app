@@ -3,16 +3,19 @@ const Playlist = require('../models/playlists');
 const Song = require('../models/songs');
 
 
+
 exports.add_follow = function (req, res) {
+    console.log(req.body.id);
+    res.send("hellobitch");
     console.log('im in');
     var id = req.body.id;
-    Playlist.findOneAndUpdate({
+    /*Playlist.findOneAndUpdate({
         _id: id
     }, {
         $inc: {
-            'playlist.followers': 1
+            'followers': 1
         }
-    })
+    })*/
 };
 
 
