@@ -54,8 +54,9 @@
                         <div class="card userprof" style="background-color: black;">
                             <div class="ds-top"></div>
                             <div class="avatar-holder">
-                                <img src="https://media.discordapp.net/attachments/670281324262719499/796319489708261377/image0.png?width=298&height=530"
-                                    alt="Lucas">
+                                <% for (var i = 0; i < 1; i++) { %>
+                                <img src="<%= user[i].image %>" alt="Lucas">
+                                <% } %>
                             </div>
                             <div class="name">
                                 <% if (user.length > 0) { %>

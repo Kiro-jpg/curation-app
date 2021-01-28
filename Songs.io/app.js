@@ -44,6 +44,9 @@ mongoose.connect(dbURL, {
 })).catch((err) => console.log(err));
 
 
+// cross site proctection
+var xss = require("xss");
+var html = xss('<script>alert("xss");</script>');
 
 
 // View Engine Setup
@@ -56,10 +59,14 @@ app.use(express.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
-app.use(express.urlencoded({ extended:true }));
+app.use(express.urlencoded({
+  extended: true
+}));
 
 // Bodyparser
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({
+  extended: false
+}));
 
 // Express session
 app.use(session({
@@ -75,7 +82,7 @@ app.use(passport.session());
 app.use(flash());
 
 // Global var
-app.use((req, res, next) =>{
+app.use((req, res, next) => {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
