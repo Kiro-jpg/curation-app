@@ -27,14 +27,17 @@
         <% for (var i = 0; i < playlist.song.length; i++) {%>
         <div class="singlePlaylistcon2">
             <div class="card bg-transparent songcon2" style="border:none;">
+                <div style="color: #141414;" class="btncontainertrash">
+                    <button class="btn trash2btn"><i class="fas fa-trash trashu"></i></button>
+                </div>
                 <div class="songcontainer">
+                    <p class="numbersong">1</p>
                     <a class="single" href=""></a>
                     <img class="image" height="50px" width="50px" style="margin-left:0;"
                         src="<%= playlist.song[i].image %>"></img>
                     </a>
 
                     <div class="songTitle3">
-
                         <a class="single" href="">
                             <p class="songs3" style="margin: 0;"><%= playlist.song[i].title %></p>
                         </a>
@@ -46,6 +49,7 @@
 
                 </div>
             </div>
+
         </div>
         <%  }%>
         <% } else { %>
