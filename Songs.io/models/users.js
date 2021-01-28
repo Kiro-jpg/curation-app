@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const Playlist = require('../models/playlists');
+const Playlist = require('../models/playlists').schema
+
 
 const usersSchema = new Schema({
     username: {
@@ -18,7 +19,16 @@ const usersSchema = new Schema({
     name: {
         type: String,
         required: true
-    }
+    },
+    image: {
+        type: String,
+        required: false
+    },
+    bio: {
+        type: String,
+        required: false
+    },
+    playlist: [Playlist]
 }, {
     timestamps: true
 });

@@ -60,7 +60,7 @@
                             <div class="name">
                                 <% if (user.length > 0) { %>
                                 <% user.forEach(user => { %>
-                                <a href="/users" target="_blank"><%= user.name %></a>
+                                <a href="/users/<%= user._id %>" target="_blank"><%= user.name %></a>
                                 <% }) %>
                                 <% } else { %>
                                 <p>There are no user to display...</p>
