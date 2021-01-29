@@ -15,13 +15,14 @@
                     <div class="col-md-3">
                         <div class="blocks genPlaylist">
                             <div class="block homeplaylist">
-                                <div class="overlay">
-                                    <img src="http://drh.img.digitalriver.com/DRHM/Storefront/Site/atvi/cm/images/site/play-button-overlay.png"
-                                        alt="Play" />
-                                </div>
+                                <a href="playlist/<%= user.playlist[i]._id %>">
+                                    <div class="overlay">
+                                        <img src="http://drh.img.digitalriver.com/DRHM/Storefront/Site/atvi/cm/images/site/play-button-overlay.png"
+                                            alt="Play" />
+                                    </div>
 
-                                <img src="<%= user.playlist[i].image %>" alt="Image" />
-
+                                    <img src="<%= user.playlist[i].image %>" alt="Image" />
+                                </a>
                             </div>
                         </div>
                     </div>
