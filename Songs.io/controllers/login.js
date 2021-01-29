@@ -9,7 +9,8 @@ exports.render_login = function (req, res) {
 }
 
 exports.login = function (req, res, next) {
-    console.log('im in');
+
+    req.session.email = req.body.email;
     passport.authenticate('local', {
         successRedirect: '/',
         failureRedirect: '/login',
@@ -21,6 +22,12 @@ exports.login = function (req, res, next) {
 
 exports.logout = function (req, res) {
     req.logout();
+    req.session.destroy((err) => {
+        if (err) {
+            return console.log(err);
+        }
+        res.redirect('/');
+    });
     req.flash('success_msg', 'You are logged out');
     res.redirect('/login');
 }
