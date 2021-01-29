@@ -17,16 +17,22 @@ exports.render = function (req, res, next) {
             break;
     }
 
-    // console.log(req.session.email);
-    // console.log(id);
-    User.findById(id)
-        .then((result) => {
-            res.render('index.ejs', {
-                title: 'Groovy',
-                user: result,
-            })
-        })
-        .catch((err) => {
-            console.log(err);
+    if (req.session.email == "admin@gmail.com") {
+        res.render("admin.ejs", {
+            title: 'Groovy Admin'
         });
+    } else {
+        // console.log(req.session.email);
+        // console.log(id);
+        User.findById(id)
+            .then((result) => {
+                res.render('index.ejs', {
+                    title: 'Groovy',
+                    user: result,
+                })
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }
 };
