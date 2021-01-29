@@ -26,7 +26,7 @@ exports.logout = function (req, res) {
         if (err) {
             return console.log(err);
         }
-        res.redirect('/');
+        res.redirect('/login');
     });
     req.flash('success_msg', 'You are logged out');
     res.redirect('/login');
