@@ -2,11 +2,93 @@
 <html lang="en">
 
 <%- include("./partials/head.ejs") %>
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: table;
+        background-color: black;
+    }
+
+    @font-face {
+        font-family: neon;
+        src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+    }
+
+    .container {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .neon {
+        font-family: neon;
+        color: #fb3f94;
+        font-size: 9vw;
+        line-height: 9vw;
+        text-shadow: 0 0 3vw #970e4c;
+    }
+
+    .flux {
+        font-family: neon;
+        color: #3b176e;
+        font-size: 9vw;
+        line-height: 9vw;
+        text-shadow: 0 0 3vw #6a27c7;
+    }
+
+    .neon {
+        animation: neon 3s ease infinite;
+        -moz-animation: neon 3s ease infinite;
+        -webkit-animation: neon 3s ease infinite;
+    }
+
+    @keyframes neon {
+
+        0%,
+        100% {
+            text-shadow: 0 0 1vw #970e4c, 0 0 3vw #970e4c, 0 0 10vw #970e4c, 0 0 10vw #970e4c, 0 0 .4vw #970e4c, .5vw .5vw .1vw #970e4c;
+            color: #fb3f94;
+        }
+
+        50% {
+            text-shadow: 0 0 .5vw #970e4c, 0 0 1.5vw #970e4c, 0 0 5vw #970e4c, 0 0 5vw #970e4c, 0 0 .2vw #970e4c, .5vw .5vw .1vw #970e4c;
+            color: #ffffff;
+        }
+    }
+
+    .flux {
+        animation: flux 3s ease infinite;
+        -moz-animation: flux 3s ease infinite;
+        -webkit-animation: flux 3s ease infinite;
+        -o-animation: flux 3s ease infinite;
+    }
+
+    @keyframes flux {
+
+        0%,
+        100% {
+            text-shadow: 0 0 1vw #7249ac, 0 0 3vw #7249ac, 0 0 10vw #7249ac, 0 0 10vw #7249ac, 0 0 .4vw #7249ac, .5vw .5vw .1vw #7249ac;
+            color: #3b176e;
+        }
+
+        50% {
+            text-shadow: 0 0 .5vw #7249ac, 0 0 1.5vw #7249ac, 0 0 5vw #7249ac, 0 0 5vw #7249ac, 0 0 .2vw #7249ac, .5vw .5vw .1vw #7249ac;
+            color: #ffffff;
+        }
+    }
+</style>
 
 <body>
     <%- include("./partials/nav-search.ejs") %>
 
-    <h1>WELCOME ADMIN!</h1>
+    <div class="container">
+        <div class="neon">Welcome </div>
+        <div class="flux">Admin </div>
+    </div>
 </body>
 
 </html>
