@@ -54,8 +54,13 @@
 </style>
 <div class="container">
     <div class="text-box">
+        <% if (error.status){ %>
         <h1><%=error.status %></h1>
         <h1><%=error.status %></h1>
+        <% }  else { %>
+        <h1>500</h1>
+        <h1>500</h1>
+        <% } %>
     </div>
-    <p><%= message %></p>
+    <p>Oops! There was an error! The boys are on it. <%= error %></p>
 </div>
