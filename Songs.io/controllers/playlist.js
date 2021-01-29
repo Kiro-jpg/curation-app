@@ -20,6 +20,21 @@ exports.add_follow = function (req, res) {
 };
 
 
+exports.delete_playlist = function (req, res) {
+    console.log("dwqeqwdsad");
+    const id = req.data;
+    console.log(id);
+
+    Playlist.findByIdAndDelete(id).then(result => {
+            res.json({
+                redirect: '/playlist'
+            });
+        })
+        .catch(err => {
+            console.log(err);
+        })
+}
+
 exports.add_singlelist = function (req, res) {
     const id = req.params.id;
 
@@ -64,15 +79,3 @@ exports.post_playlist = function (req, res) {
         });
 
 };
-
-exports.delete_playlist = function (req, res) {
-    const id = req.params.id;
-    console.log("dwqeqwdsad");
-    Playlist.findByIdAndDelete(id)
-    .then(result=>{
-        res.json({redirect: '/playlist'});
-    })
-    .catch(err =>{
-        console.log (err);
-    })
-}

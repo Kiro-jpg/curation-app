@@ -11,8 +11,8 @@
 
   <div class="card bg-dark playcon">
     <div class="btncontainertrash">
-      <button id="delete" class="btn-dark trashbtn" value="delete" data-doc="<%= playlist._id %>"><i
-          class="fas fa-trash"></i></button>
+      <button id="delete<%= playlist.title %>" class="btn-dark trashbtn">yes</button>
+      <p name="deleter" deleteid="<%= playlist._id %>"></p>
     </div>
     <div class="playlistcontainer">
       <a class="single" href="/playlist/<%= playlist._id %>">
@@ -41,23 +41,18 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="/javascripts/main.js"></script>
 
-  <script>
-    const deletecan = document.querySelector('button.trashbtn');
 
-    deletecan.addEventListener('click', (e) => {
-      const endpoint = `/playlists/${deletecan.dataset.doc}`;
-
-      fetch(endpoint, {
-          url: '/delete-playlist',
-          method: 'DELETE'
-        })
-        .then((response) => response.json())
-        .then((data) => console.log(data))
-
-        .catch(err => console.log(err));
-
-    })
-  </script>
 </body>
+<script>
+  $("#deleteOPM").click(function () {
+    var userType = $("p[name=deleter]").attr('deleteid');
+    console.log(userType);
+    $.ajax({
+      url: "/delete-playlist",
+      method: "DELETE",
+      data: userType
+    })
+  });
+</script>
 
 </html>
