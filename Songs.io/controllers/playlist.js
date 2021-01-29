@@ -66,9 +66,13 @@ exports.post_playlist = function (req, res) {
 };
 
 exports.delete_playlist = function (req, res) {
-    Playlist.deleteOne(req.body, function (err, res) {
-        if (err) throw err;
-        console.log(res);
-        console.log("Playlist deleted")
+    const id = req.params.id;
+    console.log("dwqeqwdsad");
+    Playlist.findByIdAndDelete(id)
+    .then(result=>{
+        res.json({redirect: '/playlist'});
     })
-};
+    .catch(err =>{
+        console.log (err);
+    })
+}
