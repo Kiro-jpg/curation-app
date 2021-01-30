@@ -31,11 +31,11 @@
                         <div class="modal-body modalcon">
                             <form>
                                 <label for="userName">Name:</label><br>
-                                <input type="text" id="userName" name="fname"><br>
+                                <input type="text" id="userName" name="username" value="<%= user.name %>"><br>
                                 <label for="userDescription">Description:</label><br>
-                                <input type="text" id="userDescription" name="lname"><br>
+                                <input type="text" id="userDescription" name="userdescription" value="<%= user.bio %>"><br>
                                 <label for="userimgLink">User Image Link:</label><br>
-                                <input type="text" id="userimgLink" name="lname">
+                                <input type="text" id="userimgLink" name="userimagelink" value="<%= user.image %>">
                             </form>
 
                         </div>
