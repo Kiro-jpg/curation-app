@@ -17,7 +17,8 @@
             <div class="namedescription2">
                 <h1 class="singleplaylistname"><%= playlist.title %></h1>
                 <p class="playlistDescription2" style="margin: 0;"><%= playlist.description %></p>
-                <button id="follow" class="btn-dark followbtn"> Follow +</button>
+                <a href="follow/<%= playlist._id %>"><button id="follow" class="btn-dark followbtn"> Follow
+                        +</button></a>
                 <p style="color: white;" followcount="<%= playlist.followers %>" name="followers">Followers:
                     <%= playlist.followers %>
                 </p>
@@ -72,11 +73,7 @@
     $("#follow").click(function () {
         var userType = $("p[name=followers]").attr('followcount');
         console.log(userType);
-        $.ajax({
-            url: "/follow/?userType",
-            method: "GET",
-            data: userType
-        })
+
     });
 </script>
 
