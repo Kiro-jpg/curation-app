@@ -28,16 +28,15 @@
                         <div class="modal-header modalcon">
                             <h5 class="modal-title" id="exampleModalLabel">Edit Playlist</h5>
                         </div>
+                        <form action="<% `/users/${user._id}/update?_method=PUT` %> " method="POST"></form>
                         <div class="modal-body modalcon">
-                            <form method="POST">
-                                <label for="userName">Name:</label><br>
-                                <input type="text" id="userName" name="username" value="<%= user.name %>"><br>
-                                <label for="userDescription">Description:</label><br>
-                                <input type="text" id="userDescription" name="userdescription"
-                                    value="<%= user.bio %>"><br>
-                                <label for="userimgLink">User Image Link:</label><br>
-                                <input type="text" id="userimgLink" name="userimagelink" value="<%= user.image %>">
-                            </form>
+
+                            <label for="userName">Name:</label><br>
+                            <input type="text" id="userName" name="username"><br>
+                            <label for="userDescription">Description:</label><br>
+                            <input type="text" id="userDescription" name="userdescription"><br>
+                            <label for="userimgLink">User Image Link:</label><br>
+                            <input type="text" id="userimgLink" name="userimagelink">
 
                         </div>
                         <div class="modal-footer modalcon">
@@ -47,6 +46,8 @@
                                         class="fas fa-save"></i></button></a>
 
                         </div>
+                        </form>
+
                     </div>
                 </div>
             </div>
