@@ -5,7 +5,7 @@ const controller = require('../controllers/playlist');
 
 
 // increment follow counter
-router.get('/follow', controller.add_follow);
+router.get('/playlist/follow/:id', controller.add_follow);
 
 // get single playlist 
 router.get('/playlist/:id', controller.add_singlelist);
