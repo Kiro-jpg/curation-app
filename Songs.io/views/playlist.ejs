@@ -11,7 +11,8 @@
 
   <div class="card bg-dark playcon">
     <div class="btncontainertrash">
-      <button id="delete<%= playlist.title %>" class="btn-dark trashbtn">yes</button>
+      <a href="delete-playlist/<%= playlist._id %>"><button id="delete<%= playlist.title %>"
+          class="btn-dark trashbtn">Test</button></a>
       <p name="deleter" deleteid="<%= playlist._id %>"></p>
     </div>
     <div class="playlistcontainer">

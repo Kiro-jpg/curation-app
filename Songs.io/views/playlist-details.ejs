@@ -28,8 +28,9 @@
         <div class="singlePlaylistcon2">
             <div class="card bg-transparent songcon2" style="border:none;">
                 <div style="color: #141414;" class="btncontainertrash">
-                    <button class="btn trash2btn"><i class="fas fa-trash trashu"></i></button>
-                </div>
+                    <a href="delete-song/<%= playlist._id %>/<%= playlist.song[i]._id %>"><button
+                            class="btn trash2btn"><i class="fas fa-trash trashu"></i></button>
+                </div></a>
                 <div class="songcontainer">
                     <p class="numbersong">1</p>
                     <a class="single" href=""></a>
@@ -65,7 +66,7 @@
         var userType = $("p[name=followers]").attr('followcount');
         console.log(userType);
         $.ajax({
-            url: "/follow",
+            url: "/follow/?userType",
             method: "GET",
             data: userType
         })

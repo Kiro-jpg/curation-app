@@ -21,14 +21,11 @@ exports.add_follow = function (req, res) {
 
 
 exports.delete_playlist = function (req, res) {
-    console.log("dwqeqwdsad");
-    const id = req.data;
+    const id = req.params.id;
     console.log(id);
 
     Playlist.findByIdAndDelete(id).then(result => {
-            res.json({
-                redirect: '/playlist'
-            });
+            res.redirect('/playlist')
         })
         .catch(err => {
             console.log(err);
