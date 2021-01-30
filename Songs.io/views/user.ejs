@@ -29,11 +29,12 @@
                             <h5 class="modal-title" id="exampleModalLabel">Edit Playlist</h5>
                         </div>
                         <div class="modal-body modalcon">
-                            <form>
+                            <form method="POST">
                                 <label for="userName">Name:</label><br>
                                 <input type="text" id="userName" name="username" value="<%= user.name %>"><br>
                                 <label for="userDescription">Description:</label><br>
-                                <input type="text" id="userDescription" name="userdescription" value="<%= user.bio %>"><br>
+                                <input type="text" id="userDescription" name="userdescription"
+                                    value="<%= user.bio %>"><br>
                                 <label for="userimgLink">User Image Link:</label><br>
                                 <input type="text" id="userimgLink" name="userimagelink" value="<%= user.image %>">
                             </form>
@@ -42,7 +43,9 @@
                         <div class="modal-footer modalcon">
                             <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i
                                     class="fas fa-times-circle"></i></button>
-                            <button type="button" class="btn btn-dark"><i class="fas fa-save"></i></button>
+                            <a href="/users/<%= user._id %>"><button type="button" class="btn btn-dark"><i
+                                        class="fas fa-save"></i></button></a>
+
                         </div>
                     </div>
                 </div>
