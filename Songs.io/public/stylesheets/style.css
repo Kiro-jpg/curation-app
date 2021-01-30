@@ -1726,3 +1726,38 @@ a {
   margin: 0;
 
 }
+
+.editbtn {
+  height: 40px;
+  width: 75px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 1rem;
+  margin-left: 4rem;
+  color: #141414;
+  background-color: transparent;
+}
+
+.editbtn2 {
+  height: 40px;
+  width: 75px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 1rem;
+  color: #141414;
+  background-color: transparent;
+}
+
+
+.edit {
+  color: white;
+}
+
+.modalcon {
+  background-color: #141414;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
