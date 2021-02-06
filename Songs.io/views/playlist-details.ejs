@@ -35,21 +35,22 @@
                             <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
                         </div>
                         <div class="modal-body modalcon">
-                            <form>
+                            <form action="playlist/update" method="POST">
                                 <label for="playlistname">Playlist Name:</label><br>
-                                <input type="text" id="playlistname" name="fname"><br>
+                                <input type="text" id="playlistname" name="playlistname"><br>
                                 <label for="playlistDescription">Description:</label><br>
-                                <input type="text" id="playlistDescription" name="lname"><br>
+                                <input type="text" id="playlistDescription" name="playlistdescription"><br>
                                 <label for="playlistimglink">Image Link:</label><br>
-                                <input type="text" id="playlistimglink" name="fname"><br>
-                            </form>
+                                <input type="text" id="playlistimglink" name="playlistimagelink"><br>
+
 
                         </div>
                         <div class="modal-footer modalcon">
                             <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i
                                     class="fas fa-times-circle"></i></button>
-                            <button type="button" class="btn btn-dark"><i class="fas fa-save"></i></button>
+                            <button type="submit" class="btn btn-dark"><i class="fas fa-save"></i></button>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
