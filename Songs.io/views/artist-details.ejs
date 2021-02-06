@@ -19,11 +19,11 @@
                     </a>
                     <div class="songTitle">
                         <a class="single" href="">
-                            <p class="songs" style="margin: 0;">Ill intentions</p>
+                            <p class="songs" style="margin: 0;"><%= artist.song.title %></p>
                         </a>
-                        <p class="songartist" style="margin: 0;">Drake</p>
+                        <p class="songartist" style="margin: 0;"><%= artist.song.album %></p>
                         <div class="songslength">
-                            <p class="songtime">3:30</p>
+                            <p class="songtime"><%= artist.song.duration %></p>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,9 @@
             </div>
         </div>
         <div class="artistdescription">
-            <p class="ardescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, deleniti! Doloremque, labore neque! Ipsum suscipit ut consequatur, corporis aperiam explicabo eveniet, ea doloribus, nesciunt inventore ullam vitae. Eos, harum possimus.</p>
+            <p class="ardescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, deleniti!
+                Doloremque, labore neque! Ipsum suscipit ut consequatur, corporis aperiam explicabo eveniet, ea
+                doloribus, nesciunt inventore ullam vitae. Eos, harum possimus.</p>
         </div>
         <img src="<%= artist.bg %>" class="artistbg" alt="">
     </div>

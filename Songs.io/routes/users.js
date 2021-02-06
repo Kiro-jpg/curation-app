@@ -44,16 +44,19 @@ router.get('/users/:id', function (req, res, next) {
     });
 });
 
-router.put('/users/:id/update', function (req, res, next) {
-  let userId = req.params.id;
+router.post('/users/:id/update', function (req, res, next) {
+  console.log("in");
+  let userId = "5ffb23fd4e8e211dcc877aa9";
+  console.log(userId)
   let param = "/users/" + userId;
+  console.log(param);
   var userParams = {
     name: req.body.username,
     bio: req.body.userdescription,
     image: req.body.userimagelink
   };
   console.log(userParams);
-  res.send("gago");
+
   User.findByIdAndUpdate(userId, {
       $set: userParams
     })
