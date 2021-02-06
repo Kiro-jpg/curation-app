@@ -575,7 +575,7 @@ a {
   -webkit-box-shadow: 0px 0px 29px 9px rgba(251, 63, 148, 1);
   -moz-box-shadow: 0px 0px 29px 9px rgba(251, 63, 148, 1);
   box-shadow: 0px 0px 29px 9px rgba(251, 63, 148, 1);
-  margin-left: 26rem;
+  margin-left: 40rem;
   margin-top: 10rem;
 }
 
@@ -588,9 +588,9 @@ a {
 
 .GroovyLogo3 {
   height: 35%;
-  width: 60%;
+  width: 70%;
   margin-top: 5rem;
-  margin-left: 8rem;
+  margin-left: 6rem;
 }
 
 .button3 {
@@ -1760,4 +1760,18 @@ a {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: 20px;
+}
+
+.registerform {
+  margin-top: 10rem;
+}
+
+.regform,
+.regicon {
+  color: white;
+}
+
+.regbtn {
+  margin-top: 2rem;
+  margin-left: 25rem;
 }
