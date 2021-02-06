@@ -276,6 +276,7 @@ a {
   height: 40px;
   text-align: center;
   animation: fadeIn 2s ease-in;
+  z-index: 10000;
 }
 
 .card .name a {
