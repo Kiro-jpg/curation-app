@@ -1779,14 +1779,19 @@ a {
 
 .registerform {
   margin-top: 10rem;
+  margin-left: 12rem;
 }
 
-.regform,
-.regicon {
+.regform {
   color: white;
+}
+
+.regicon {
+  color: #fb3f94;
 }
 
 .regbtn {
   margin-top: 2rem;
-  margin-left: 25rem;
+  margin-left: 17rem;
+  height: 50px;
 }

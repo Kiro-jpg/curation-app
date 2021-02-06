@@ -8,7 +8,7 @@
     <div class="registerform">
         <div class="row mt-5 g-0">
             <div class="col-md-6 m-auto">
-                <div class="card card-body" style="background-color: #141414; border: 1px solid #3b176e;">
+                <div class="card card-body" style="background-color: #141414; border: 1px solid #3b176e; width: 650px;">
                     <h1 class="text-center mb-3" style="color: white;">
                         <i class="fas fa-user-plus regicon"></i> Register
                     </h1>
@@ -42,11 +42,12 @@
                                 placeholder="Confirm Password"
                                 value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
                         </div>
-                        <button type="submit" class="btn btn-block regbtn" style="color: #fb3f94;">
+                        <button type="submit" class="btn btn-transparent btn-block regbtn"
+                            style="color: #fb3f94; font-size: large;">
                             Register
                         </button>
                     </form>
-                    <p class="lead mt-4" style="color: white;">Have An Account? <a href="/users/login">Login</a></p>
+                    <p class="lead mt-4" style="color: white;">Have An Account? <a href="/login">Login</a></p>
                 </div>
             </div>
         </div>
