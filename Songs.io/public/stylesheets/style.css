@@ -1127,7 +1127,7 @@ a {
   position: absolute;
   background-color: #15151534;
   color: rgb(255, 255, 255);
-  height: 150px;
+  min-height: 150px;
   width: 450px;
   margin-left: 70rem;
   margin-top: 46rem;
@@ -1138,22 +1138,16 @@ a {
   margin: 1rem;
 }
 
-.songcon {
+.arsongcon {
   background: transparent;
   font-family: "Krub", sans-serif;
   position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   width: 250px;
-  height: 400px;
+  height: fit-content;
   border-radius: 10px;
-  overflow: hidden;
-  height: 150px;
+  height: 75px;
   width: 90%;
-  margin-bottom: 4rem;
+  display: grid;
 }
 
 .songcontainer {
@@ -1219,7 +1213,7 @@ a {
   float: right;
 
   color: white;
-  display: flex;
+  display: grid;
   margin-top: 1rem;
 }
 
@@ -1238,7 +1232,6 @@ a {
 }
 
 .songcon2 {
-  color: #fb3f94;
   font-size: 25px;
   font-weight: 600;
   position: absolute;
@@ -1509,7 +1502,7 @@ a {
   top: 15rem;
   margin-left: 5rem;
   color: white;
-  display: flex;
+  display: grid;
 }
 
 .artistheadercon {
@@ -1803,4 +1796,22 @@ a {
   margin-top: 2.1rem;
   margin-left: 1rem;
   z-index: 10000;
+}
+
+.songcontainer2 {
+  display: flex;
+  position: absolute;
+  margin-left: 3rem;
+}
+
+.songcon3 {
+  background: transparent;
+  font-family: "Krub", sans-serif;
+  position: absolute;
+  width: 250px;
+  height: fit-content;
+  border-radius: 10px;
+  height: 75px;
+  width: 90%;
+  display: grid;
 }
