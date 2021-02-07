@@ -1817,12 +1817,12 @@ a {
 }
 
 .addbtn {
-  height: 25px;
-  width: 25px;
+  height: 28px;
+  width: 65px;
   border-radius: 30px;
   border: none;
   margin-top: .8rem;
-  margin-left: 38.5rem;
+  margin-left: 37rem;
 }
 
 .btncon {
