@@ -40,7 +40,7 @@ mongoose.connect(dbURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => app.listen(port, () => {
-  console.log(`Listening at http://localhost:3000`)
+  console.log(`Listening at http://localhost:${port}`)
 })).catch((err) => console.log(err));
 
 
