@@ -32,16 +32,16 @@ require('./config/passport')(passport);
 
 
 // Port
-var port = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // Database
 const dbURL = 'mongodb+srv://josh:test1234@groovy.x687l.mongodb.net/groovy-db?retryWrites=true&w=majority'
 mongoose.connect(dbURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
-}).then(() =>
-  console.log(`Listening at http://localhost:${port}`)
-).catch((err) => console.log(err));
+}).then(() => app.listen(PORT, () => {
+  console.log(`Listening at http://localhost:${PORT}`)
+})).catch((err) => console.log(err));
 
 
 // cross site proctection

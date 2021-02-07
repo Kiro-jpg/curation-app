@@ -22,25 +22,31 @@
                 <h1 class="singlealbumname" style="margin:0;"><%= album.name %></h1>
                 <p class="songalbum" style="margin: 0;"><%= album.snippet %></p>
 
+                <% if (album.song.length > 0) { %>
+                <% for (var i = 0; i < album.song.length; i++) {%>
                 <div class="singleAlbumcon2">
                     <div class="card bg-transparent songcon2" style="border:none;">
                         <div class="songcontainer">
                             <a class="single" href=""></a>
                             <img class="image" height="50px" width="50px" style="margin-left:0;"
-                                src="https://images-ext-2.discordapp.net/external/wV7GwkU_8Ja4lEhFOIRX_CV1xhbsrhx0LPxWN74dKfE/https/images.genius.com/c4b505be7fffccf7719b00c57126f51d.715x715x1.jpg?width=676&height=676"></img>
+                                src="<%= album.song[i].image %>"></img>
                             </a>
                             <div class="songTitle2">
                                 <a class="single" href="">
-                                    <p class="songs2" style="margin: 0;"><%= album.song.title %></p>
+                                    <p class="songs2" style="margin: 0;"><%= album.song[i].title %></p>
                                 </a>
-                                <p class="songartist2" style="margin: 0;"><%= album.song.artist %></p>
+                                <p class="songartist2" style="margin: 0;"><%= album.song[i].artist %></p>
                                 <div class="songslength2">
-                                    <p class="songtime2"><%= album.song.duration %></p>
+                                    <p class="songtime2"><%= album.song[i].duration %></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <%  }%>
+                <% } else { %>
+                <p>test failed</p>
+                <% }  %>
             </div>
 
         </div>
