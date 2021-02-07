@@ -101,10 +101,11 @@
                     <div class="sortingsong">
                         <i class="fa fa-bars fa-xs sortingbars"></i>
                     </div>
-                    <div style="color: #141414;" class="btncontainertrash">
-                        <a href="delete-song/<%= playlist._id %>/<%= playlist.song[i]._id %>"><button
-                                class="btn trash2btn"><i class="fas fa-trash trashu"></i></button>
-                    </div></a>
+                    <div class="btncontainertrash">
+                        <button class="btn trash2btn" style="color: #141414;"><a
+                                href="delete-song/<%= playlist._id %>/<%= playlist.song[i]._id %>"></a><i
+                                class="fas fa-trash trashu"></i></a></button>
+                    </div>
 
                     <div class="songcontainer">
                         <a class="single" href=""></a>
