@@ -32,7 +32,7 @@ require('./config/passport')(passport);
 
 
 // Port
-const port = 3000;
+var port = process.env.PORT || 8080;
 
 // Database
 const dbURL = 'mongodb+srv://josh:test1234@groovy.x687l.mongodb.net/groovy-db?retryWrites=true&w=majority'
