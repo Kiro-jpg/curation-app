@@ -22,11 +22,14 @@
                 <h1 class="singlealbumname" style="margin:0;"><%= album.name %></h1>
                 <p class="songalbum" style="margin: 0;"><%= album.snippet %></p>
 
-                <% if (album.song.length > 0) { %>
-                <% for (var i = 0; i < album.song.length; i++) {%>
+
                 <div class="singleAlbumcon2">
-                    <div class="card bg-transparent songcon2" style="border:none;">
-                        <div class="songcontainer">
+                    <% if (album.song.length > 0) { %>
+                    <% for (var i = 0; i < album.song.length; i++) {%>
+                    <div class="card bg-transparent songcon3" style="border:none;">
+
+                        <div class="songcontainer2">
+
                             <a class="single" href=""></a>
                             <img class="image" height="50px" width="50px" style="margin-left:0;"
                                 src="<%= album.song[i].image %>"></img>
@@ -41,12 +44,14 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
+                    <%  }%>
+                    <% } else { %>
+                    <p>test failed</p>
+                    <% }  %>
                 </div>
-                <%  }%>
-                <% } else { %>
-                <p>test failed</p>
-                <% }  %>
+
             </div>
 
         </div>

@@ -12,10 +12,11 @@
         <h1 class="artistname2"><%= artist.name %></h1>
 
 
-        <% if (artist.song.length > 0) { %>
-        <% for (var i = 0; i < artist.song.length; i++) {%>
+
         <div class="singleArtistcon2">
-            <div class="card bg-transparent songcon" style="border: none;">
+            <% if (artist.song.length > 0) { %>
+            <% for (var i = 0; i < artist.song.length; i++) {%>
+            <div class="card bg-transparent arsongcon" style="border: none;">
                 <div class="songcontainer">
                     <a class="single" href=""></a>
                     <img class="image" height="50px" width="50px" src="<%= artist.song[i].image %>"></img>
@@ -30,13 +31,13 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+            <%  }%>
+            <% } else { %>
+            <p>test failed</p>
+            <% }  %>
         </div>
-        <%  }%>
-        <% } else { %>
-        <p>test failed</p>
-        <% }  %>
+
         <div class="artistdescription">
             <p class="ardescription"><%= artist.description %></p>
         </div>
