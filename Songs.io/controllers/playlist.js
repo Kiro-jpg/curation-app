@@ -78,3 +78,29 @@ exports.post_playlist = function (req, res) {
         });
 
 };
+
+exports.update_playlist = function (req, res, next) {
+    console.log("in");
+    let userId = "5ff71cf173bb222034fd0a46";
+    console.log(userId)
+    let param = "/playlist/" + userId;
+    console.log(param);
+    var userParams = {
+        title: req.body.playlistname,
+        description: req.body.playlistdescription,
+        image: req.body.playlistimagelink
+    };
+    console.log(userParams);
+
+    Playlist.findByIdAndUpdate(userId, {
+            $set: userParams
+        })
+        .then(user => {
+            res.redirect(param);
+            res.locals.user = user;
+            next();
+        })
+        .catch(err => {
+            console.log(err);
+        });
+};
