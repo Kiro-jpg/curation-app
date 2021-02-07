@@ -1796,3 +1796,11 @@ a {
   margin-left: 17rem;
   height: 50px;
 }
+
+.sortingbars {
+  color: white;
+  position: absolute;
+  margin-top: 2.1rem;
+  margin-left: 1rem;
+  z-index: 10000;
+}

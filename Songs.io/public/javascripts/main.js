@@ -10,3 +10,8 @@ $(document).ready(function () {
   });
 });
 
+let player = document.getElementById("sort-songs");
+new Sortable(player, {
+  handle: '.sortingsong',
+  animation: 200
+});
