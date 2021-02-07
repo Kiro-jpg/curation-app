@@ -120,6 +120,28 @@ exports.delete_song = function (req, res) {
         }
     }).then(user => {
         res.redirect('/playlist/' + id1);
+        
+    })
+}
+
+exports.add_song = function (req,res){
+    var id = req.params.id;
+    console.log(id);
+    var userParams = {
+        title: req.body.songname,
+        duration: req.body.duration,
+        image: req.body.songimglink,
+        album: req.body.albumname,
+        artist: req.body.artistname
+    };
+
+    console.log(userParams);
+    Playlist.findByIdAndUpdate(id, {
+        '$push': {
+            'song': userParams
+        }
+    }).then(user => {
+        res.redirect('/playlist/' + id);
         next();
     })
 }

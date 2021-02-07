@@ -21,5 +21,6 @@ router.post('/playlist/update/:id', controller.update_playlist);
 
 router.get('/playlist/delete-song/:id/:song', controller.delete_song);
 
+router.post('/playlist/add-song/:id', controller.add_song);
 
 module.exports = router;
