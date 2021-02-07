@@ -56,40 +56,44 @@
             </div>
 
         </div>
-        <% if (playlist.song.length > 0) { %>
-        <% for (var i = 0; i < playlist.song.length; i++) {%>
-        <div class="singlePlaylistcon2">
-            <div class="card bg-transparent songcon2" style="border:none;">
-                <div style="color: #141414;" class="btncontainertrash">
-                    <a href="delete-song/<%= playlist._id %>/<%= playlist.song[i]._id %>"><button
-                            class="btn trash2btn"><i class="fas fa-trash trashu"></i></button>
-                </div></a>
-                <div class="songcontainer">
-                    <p class="numbersong">1</p>
-                    <a class="single" href=""></a>
-                    <img class="image" height="50px" width="50px" style="margin-left:0;"
-                        src="<%= playlist.song[i].image %>"></img>
-                    </a>
+        <div class="something" id="sort-songs">
+            <% if (playlist.song.length > 0) { %>
+            <% for (var i = 0; i < playlist.song.length; i++) {%>
+            <div class="singlePlaylistcon2">
+                <div class="card bg-transparent songcon2" style="border:none;">
+                    <div class="sortingsong">
+                        <i class="fa fa-bars fa-xs sortingbars"></i>
+                    </div>
+                    <div style="color: #141414;" class="btncontainertrash">
+                        <a href="delete-song/<%= playlist._id %>/<%= playlist.song[i]._id %>"><button
+                                class="btn trash2btn"><i class="fas fa-trash trashu"></i></button>
+                    </div></a>
 
-                    <div class="songTitle3">
-                        <a class="single" href="">
-                            <p class="songs3" style="margin: 0;"><%= playlist.song[i].title %></p>
+                    <div class="songcontainer">
+                        <a class="single" href=""></a>
+                        <img class="image" height="50px" width="50px" style="margin-left:0;"
+                            src="<%= playlist.song[i].image %>"></img>
                         </a>
-                        <p class="songartist3" style="margin: 0;"><%= playlist.song[i].artist %></p>
-                        <div class="songslength3">
-                            <p class="songtime3"><%= playlist.song[i].duration %></p>
+
+                        <div class="songTitle3">
+                            <a class="single" href="">
+                                <p class="songs3" style="margin: 0;"><%= playlist.song[i].title %></p>
+                            </a>
+                            <p class="songartist3" style="margin: 0;"><%= playlist.song[i].artist %></p>
+                            <div class="songslength3">
+                                <p class="songtime3"><%= playlist.song[i].duration %></p>
+                            </div>
                         </div>
                     </div>
 
                 </div>
+
             </div>
-
+            <%  }%>
+            <% } else { %>
+            <p>test failed</p>
+            <% }  %>
         </div>
-        <%  }%>
-        <% } else { %>
-        <p>test failed</p>
-        <% }  %>
-
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
