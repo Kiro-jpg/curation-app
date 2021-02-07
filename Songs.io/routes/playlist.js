@@ -17,7 +17,7 @@ router.post('/playlist', controller.post_playlist);
 
 router.get("/delete-playlist/:id", controller.delete_playlist);
 
-router.post('/playlist/:id/update', controller.update_playlist);
+router.post('/playlist/update/:id', controller.update_playlist);
 
 
 module.exports = router;

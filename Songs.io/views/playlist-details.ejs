@@ -35,7 +35,7 @@
                             <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
                         </div>
                         <div class="modal-body modalcon">
-                            <form action="playlist/update" method="POST">
+                            <form action="update/<%= playlist._id %>" method="POST">
                                 <label for="playlistname">Playlist Name:</label><br>
                                 <input type="text" id="playlistname" name="playlistname"><br>
                                 <label for="playlistDescription">Description:</label><br>

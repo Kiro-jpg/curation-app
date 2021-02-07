@@ -44,11 +44,11 @@ router.get('/users/:id', function (req, res, next) {
     });
 });
 
-router.post('/users/:id/update', function (req, res, next) {
+router.post('/users/update/:id', function (req, res, next) {
   console.log("in");
-  let userId = "5ffb23fd4e8e211dcc877aa9";
+  let userId = req.params.id;
   console.log(userId)
-  let param = "/users/" + userId;
+  let param = userId;
   console.log(param);
   var userParams = {
     name: req.body.username,
@@ -61,7 +61,7 @@ router.post('/users/:id/update', function (req, res, next) {
       $set: userParams
     })
     .then(user => {
-      res.redirect(param);
+      res.redirect("/users/" + userId);
       res.locals.user = user;
       next();
     })

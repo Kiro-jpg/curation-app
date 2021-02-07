@@ -16,7 +16,7 @@ exports.add_follow = function (req, res) {
             'followers': 1
         }
     }).then(result => {
-        res.redirect('/playlist')
+        res.redirect('/playlist/' + id)
     });
 
 };
@@ -81,7 +81,7 @@ exports.post_playlist = function (req, res) {
 
 exports.update_playlist = function (req, res, next) {
     console.log("in");
-    let userId = "5ff71cf173bb222034fd0a46";
+    let userId = req.params.id;
     console.log(userId)
     let param = "/playlist/" + userId;
     console.log(param);
