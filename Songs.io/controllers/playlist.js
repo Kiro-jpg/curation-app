@@ -104,3 +104,22 @@ exports.update_playlist = function (req, res, next) {
             console.log(err);
         });
 };
+
+exports.delete_song = function (req, res) {
+    console.log('im in');
+    var id1 = req.params.id;
+    var id2 = req.params.song;
+    console.log(id1);
+    console.log(id2);
+
+    Playlist.findByIdAndUpdate(id1, {
+        '$pull': {
+            'song': {
+                '_id': id2
+            }
+        }
+    }).then(user => {
+        res.redirect('/playlist/' + id1);
+        next();
+    })
+}
