@@ -10,25 +10,26 @@
         <div class="HomeContainer">
             <div class="row g-0">
                 <div class="col-md-9 homeplaylistdisplay">
-                    <% if (user != undefined) { %>
-                    <% for (var i = 0; i < user.playlist.length; i++) {%>
-                    <div class="col-md-3">
-                        <div class="blocks genPlaylist">
-                            <div class="block homeplaylist">
-                                <a href="playlist/<%= user.playlist[i]._id %>">
-                                    <div class="overlay">
-                                        <img src="http://drh.img.digitalriver.com/DRHM/Storefront/Site/atvi/cm/images/site/play-button-overlay.png"
-                                            alt="Play" />
-                                    </div>
+                    <div class="row">
+                        <% if (user != undefined) { %>
+                        <% for (var i = 0; i < user.playlist.length; i++) {%>
+                        <div class="col-md-3">
+                            <div class="blocks genPlaylist">
+                                <div class="block homeplaylist">
+                                    <a href="playlist/<%= user.playlist[i]._id %>">
+                                        <div class="overlay">
+                                            <img src="http://drh.img.digitalriver.com/DRHM/Storefront/Site/atvi/cm/images/site/play-button-overlay.png"
+                                                alt="Play" />
+                                        </div>
 
-                                    <img src="<%= user.playlist[i].image %>" alt="Image" />
-                                </a>
+                                        <img src="<%= user.playlist[i].image %>" alt="Image" />
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                        <% } %>
+                        <% } %>
                     </div>
-
-                    <% } %>
-                    <% } %>
                 </div>
                 <% if (user != undefined) { %>
                 <div class="col-md-3">

@@ -54,16 +54,20 @@
         <div class="container Userplaylist">
 
             <div class="blocks userPlaylist">
-                <% if (user.playlist.length > 0) { %>
-                <% for (var i = 0; i < user.playlist.length; i++) {%>
-                <div class="block userlist">
-                    <a href="/playlist/<%= user.playlist[i]._id %>">
-                        <img src="<%= user.playlist[i].image %>" alt="Image" /></a>
+                <div class="row">
+                    <% if (user.playlist.length > 0) { %>
+                    <% for (var i = 0; i < user.playlist.length; i++) {%>
+                    <div class="col-md-3">
+                        <div class="block userlist">
+                            <a href="/playlist/<%= user.playlist[i]._id %>">
+                                <img src="<%= user.playlist[i].image %>" alt="Image" /></a>
+                        </div>
+                    </div>
+                    <% } %>
+                    <% } else { %>
+                    <p>There are no playlists to display...</p>
+                    <% } %>
                 </div>
-                <% } %>
-                <% } else { %>
-                <p>There are no playlists to display...</p>
-                <% } %>
             </div>
 
 
