@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Playlist = require('../models/playlists');
 const Song = require('../models/songs');
+const User = require('../models/users');
 
 
 
@@ -26,6 +27,23 @@ exports.delete_playlist = function (req, res) {
     const id = req.params.id;
     console.log(id);
 
+    var user;
+
+    if (req.session.email == "jm@gmail.com"){
+        user = "5ffb23fd4e8e211dcc877aa9";
+    }
+
+    User.findByIdAndUpdate(user, {
+        '$pull': {
+            'playlist':{
+                '_id':id
+            }
+        }
+        
+    }).then(user => {
+        next();
+    })
+
     Playlist.findByIdAndDelete(id).then(result => {
             res.redirect('/playlist')
         })
@@ -36,6 +54,7 @@ exports.delete_playlist = function (req, res) {
 
 exports.add_singlelist = function (req, res) {
     const id = req.params.id;
+    
 
     Playlist.findById(id)
         .then(result => {
@@ -68,7 +87,25 @@ exports.get_playlist = function (req, res) {
 
 exports.post_playlist = function (req, res) {
     const playlist = new Playlist(req.body);
+    var user;
+    var params = {
+        title: req.body.title,
+        image: req.body.image
+    }
 
+    if (req.session.email == "jm@gmail.com"){
+        user = "5ffb23fd4e8e211dcc877aa9";
+    }
+
+    console.log(params);
+    User.findByIdAndUpdate(user, {
+        '$push': {
+            'playlist': playlist
+            
+        }
+    }).then(user => {
+        next();
+    })
     playlist.save()
         .then((result) => {
             res.redirect('/playlist');
