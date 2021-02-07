@@ -39,9 +39,9 @@ const dbURL = 'mongodb+srv://josh:test1234@groovy.x687l.mongodb.net/groovy-db?re
 mongoose.connect(dbURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
-}).then(() => app.listen(port, () => {
+}).then(() =>
   console.log(`Listening at http://localhost:${port}`)
-})).catch((err) => console.log(err));
+).catch((err) => console.log(err));
 
 
 // cross site proctection
