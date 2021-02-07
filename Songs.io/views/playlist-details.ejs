@@ -17,13 +17,15 @@
             <div class="namedescription2">
                 <h1 class="singleplaylistname"><%= playlist.title %></h1>
                 <p class="playlistDescription2" style="margin: 0;"><%= playlist.description %></p>
-                <a href="follow/<%= playlist._id %>"><button id="follow" class="btn-dark followbtn"> Follow
-                        +</button></a>
+                <div class="btncon">
+                    <a href="follow/<%= playlist._id %>"><button id="follow" class="btn-dark followbtn"> Follow
+                            +</button></a>
+                    <button id="addsong" class="btn-dark addbtn" data-bs-toggle="modal" data-bs-target="#modaldos">
+                        <i class="fa fa-plus"></i></button>
+                </div>
                 <p style="color: white;" followcount="<%= playlist.followers %>" name="followers">Followers:
                     <%= playlist.followers %>
                 </p>
-                <button id="addsong" class="btn-dark followbtn" data-bs-toggle="modal" data-bs-target="#modaldos">
-                    Add Song </button>
             </div>
 
             <!-- Modal -->

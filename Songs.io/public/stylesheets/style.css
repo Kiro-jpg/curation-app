@@ -1815,3 +1815,16 @@ a {
   width: 90%;
   display: grid;
 }
+
+.addbtn {
+  height: 25px;
+  width: 25px;
+  border-radius: 30px;
+  border: none;
+  margin-top: .8rem;
+  margin-left: 38.5rem;
+}
+
+.btncon {
+  display: flex;
+}
