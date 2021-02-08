@@ -85,9 +85,11 @@
 <body>
     <%- include("./partials/nav-search.ejs") %>
 
+
     <div class="container">
         <div class="neon">Welcome </div>
         <div class="flux">Admin </div>
+        <a href="/users/<%= user._id %>" target="_blank"><%= user.name %></a>
     </div>
 </body>
 
