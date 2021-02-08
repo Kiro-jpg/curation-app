@@ -27,21 +27,17 @@ exports.delete_playlist = function (req, res) {
     const id = req.params.id;
     console.log(id);
 
-    var user;
-
-    if (req.session.email == "jm@gmail.com"){
-        user = "5ffb23fd4e8e211dcc877aa9";
-    }
-
-    User.findByIdAndUpdate(user, {
+    User.findOneAndUpdate({
+        email: req.session.email
+    }, {
         '$pull': {
-            'playlist':{
-                '_id':id
+            'playlist': {
+                '_id': id
             }
         }
-        
+
     }).then(user => {
-        next();
+        console.log("good");
     })
 
     Playlist.findByIdAndDelete(id).then(result => {
@@ -54,7 +50,7 @@ exports.delete_playlist = function (req, res) {
 
 exports.add_singlelist = function (req, res) {
     const id = req.params.id;
-    
+
 
     Playlist.findById(id)
         .then(result => {
@@ -87,24 +83,23 @@ exports.get_playlist = function (req, res) {
 
 exports.post_playlist = function (req, res) {
     const playlist = new Playlist(req.body);
-    var user;
+
     var params = {
         title: req.body.title,
         image: req.body.image
     }
 
-    if (req.session.email == "jm@gmail.com"){
-        user = "5ffb23fd4e8e211dcc877aa9";
-    }
 
     console.log(params);
-    User.findByIdAndUpdate(user, {
+    User.findOneAndUpdate({
+        email: req.session.email
+    }, {
         '$push': {
             'playlist': playlist
-            
+
         }
     }).then(user => {
-        next();
+        console.log("good");
     })
     playlist.save()
         .then((result) => {
@@ -117,11 +112,12 @@ exports.post_playlist = function (req, res) {
 };
 
 exports.update_playlist = function (req, res, next) {
-    console.log("in");
+
     let userId = req.params.id;
     console.log(userId)
     let param = "/playlist/" + userId;
     console.log(param);
+
     var userParams = {
         title: req.body.playlistname,
         description: req.body.playlistdescription,
@@ -146,8 +142,7 @@ exports.delete_song = function (req, res) {
     console.log('im in');
     var id1 = req.params.id;
     var id2 = req.params.song;
-    console.log(id1);
-    console.log(id2);
+
 
     Playlist.findByIdAndUpdate(id1, {
         '$pull': {
@@ -157,11 +152,11 @@ exports.delete_song = function (req, res) {
         }
     }).then(user => {
         res.redirect('/playlist/' + id1);
-        
+
     })
 }
 
-exports.add_song = function (req,res){
+exports.add_song = function (req, res, next) {
     var id = req.params.id;
     console.log(id);
     var userParams = {
@@ -172,7 +167,7 @@ exports.add_song = function (req,res){
         artist: req.body.artistname
     };
 
-    console.log(userParams);
+
     Playlist.findByIdAndUpdate(id, {
         '$push': {
             'song': userParams
